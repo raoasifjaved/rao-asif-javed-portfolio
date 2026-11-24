@@ -1,362 +1,2051 @@
-<!doctype html>
-<html lang="en" data-theme="dark">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080c16">
-  <meta name="description" content="Rao Asif Javed — Information Technology graduate focused on AI, NLP, cybersecurity and data analytics. Explore projects, experience, skills and credentials.">
-  <meta property="og:type" content="website">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rao Asif Javed | AI & NLP • Cybersecurity • Data Analytics</title>
+  <meta name="description" content="Portfolio of Rao Asif Javed, an Information Technology graduate specializing in AI, NLP, cybersecurity, and data analytics.">
+  <meta name="theme-color" content="#090d16">
   <meta property="og:title" content="Rao Asif Javed | AI, NLP & Cybersecurity">
-  <meta property="og:description" content="A practical portfolio of AI, NLP, cybersecurity and data analytics projects by Rao Asif Javed.">
-  <meta property="og:image" content="assets/social-card.svg">
-  <title>Rao Asif Javed | AI, NLP & Cybersecurity</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Rao Asif Javed",
-    "jobTitle": "Information Technology Graduate | AI, NLP and Cybersecurity",
-    "address": {"@type": "PostalAddress", "addressLocality": "Lodhran", "addressRegion": "Punjab", "addressCountry": "PK"},
-    "email": "mailto:raoasifjaved171@gmail.com",
-    "telephone": "+923025480518",
-    "sameAs": ["https://www.linkedin.com/in/rao-asif-javed/", "https://github.com/raoasifjaved"]
-  }
-  </script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
-  <div class="ambient ambient-one" aria-hidden="true"></div>
-  <div class="ambient ambient-two" aria-hidden="true"></div>
-  <div class="grid-overlay" aria-hidden="true"></div>
+  <meta property="og:description" content="Selected projects, experience, certifications, and technical skills.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/profile.jpg">
+  <link rel="icon" type="image/jpeg" href="assets/profile.jpg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 
-  <header class="site-header" id="top">
-    <div class="nav-shell container">
-      <a class="brand" href="#home" aria-label="Rao Asif Javed home">
-        <span class="brand-mark"><img src="assets/profile.jpg" alt="" width="42" height="42"></span>
-        <span class="brand-name">RAO ASIF JAVED<small>PORTFOLIO / 2026</small></span>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            obsidian: '#090d16',
+            cardbg: '#111827',
+            cyanaccent: '#06b6d4',
+            violetaccent: '#8b5cf6',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    /* Custom Scrollbar & Core Aesthetics */
+    body {
+      background-color: #090d16;
+      color: #e2e8f0;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090d16;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 9999px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #06b6d4;
+    }
+
+    /* Glassmorphism Cards */
+    .glass-card {
+      background: rgba(17, 24, 39, 0.65);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .glass-card:hover {
+      border-color: rgba(6, 182, 212, 0.45);
+      box-shadow: 0 12px 35px -10px rgba(6, 182, 212, 0.22);
+      transform: translateY(-4px);
+    }
+
+    /* Animated Cyber-Ring & Orbital Scanner around Profile Portrait */
+    @keyframes spinSlow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes spinReverse {
+      0% { transform: rotate(360deg); }
+      100% { transform: rotate(0deg); }
+    }
+    @keyframes pulseGlow {
+      0%, 100% { box-shadow: 0 0 25px rgba(6, 182, 212, 0.35), 0 0 55px rgba(139, 92, 246, 0.2); }
+      50% { box-shadow: 0 0 40px rgba(6, 182, 212, 0.6), 0 0 80px rgba(139, 92, 246, 0.38); }
+    }
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    .cyber-ring-outer {
+      animation: spinSlow 14s linear infinite;
+    }
+    .cyber-ring-inner {
+      animation: spinReverse 9s linear infinite;
+    }
+    .portrait-glow {
+      animation: pulseGlow 4s ease-in-out infinite, floatSlow 6s ease-in-out infinite;
+    }
+
+    /* Ensure uploaded face photo preserves natural aspect, crispness, and zero distortion */
+    .profile-photo-clean {
+      object-fit: cover;
+      object-position: center top;
+      filter: none !important;
+    }
+
+    /* Typing cursor blink */
+    @keyframes blink {
+      0%, 49% { opacity: 1; }
+      50%, 100% { opacity: 0; }
+    }
+    .typing-cursor {
+      display: inline-block;
+      width: 2px;
+      height: 1.15em;
+      background-color: #06b6d4;
+      margin-left: 4px;
+      vertical-align: middle;
+      animation: blink 0.9s infinite;
+    }
+
+    /* Scroll Reveal Animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease-out, transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Subtle Background Grid Overlay */
+    .bg-grid-pattern {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+
+    /* Print Styles for Recruiter CV View */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #cv-printable-area, #cv-printable-area * {
+        visibility: visible;
+      }
+      #cv-printable-area {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: #ffffff !important;
+        color: #111827 !important;
+        padding: 20px !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-obsidian text-slate-200 antialiased selection:bg-cyan-500/30 selection:text-cyan-200">
+
+  <!-- Interactive Particle Network Canvas -->
+  <canvas id="bg-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0 opacity-65"></canvas>
+  <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+
+  <!-- Toast Notification Banner -->
+  <div id="toast-container" class="fixed bottom-5 right-5 z-[100] flex flex-col gap-2 pointer-events-none"></div>
+
+  <!-- Top Navigation Bar -->
+  <header class="sticky top-0 z-40 backdrop-blur-xl bg-obsidian/80 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Brand / Monogram -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full overflow-hidden border border-cyan-400/50 shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+          <img src="assets/profile.jpg" alt="Rao Asif Javed" class="w-full h-full object-cover object-top" width="40" height="40">
+        </div>
+        <div>
+          <span id="nav-name" class="font-bold text-white tracking-tight text-sm sm:text-base block leading-none">Rao Asif Javed</span>
+          <span class="text-[11px] font-mono text-cyan-400 tracking-wider uppercase">AI • Cyber • Data</span>
+        </div>
       </a>
-      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#credentials">Credentials</a>
-        <a href="#contact">Contact</a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-cyan-400 transition-colors">Profile</a>
+        <a href="#experience" class="hover:text-cyan-400 transition-colors">Experience</a>
+        <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-cyan-400 transition-colors">Skills</a>
+        <a href="#credentials" class="hover:text-cyan-400 transition-colors">Education & Certs</a>
+        <a href="#references" class="hover:text-cyan-400 transition-colors">References</a>
       </nav>
-      <div class="nav-actions">
-        <button class="icon-button theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" title="Switch theme">
-          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
-          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.2A8.7 8.7 0 0 1 9.8 3.5 8.8 8.8 0 1 0 20.5 14.2Z"/></svg>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button onclick="openResumeModal()" class="px-3.5 py-2 rounded-xl bg-cyan-500/15 hover:bg-cyan-500/25 border border-cyan-500/40 text-cyan-300 text-xs sm:text-sm font-semibold transition-all flex items-center gap-2">
+          <i class="fa-solid fa-file-lines"></i>
+          <span>View CV</span>
         </button>
-        <a class="nav-cta" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
-        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav"><span></span><span></span></button>
+
+        <!-- Admin Mode Indicator / Login Trigger -->
+        <button id="admin-nav-btn" onclick="handleAdminTrigger()" title="Portfolio Owner CMS" class="p-2.5 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 border border-white/10 text-slate-300 hover:text-cyan-400 transition-all">
+          <i id="admin-nav-icon" class="fa-solid fa-lock text-xs sm:text-sm"></i>
+        </button>
+
+        <!-- Mobile Menu Button -->
+        <button onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-xl bg-slate-800/80 border border-white/10 text-slate-300">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900/95 border-b border-white/10 px-4 pt-3 pb-5 space-y-2">
+      <a href="#about" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:bg-white/5 hover:text-cyan-400">Profile & Interests</a>
+      <a href="#experience" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:bg-white/5 hover:text-cyan-400">Experience</a>
+      <a href="#projects" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:bg-white/5 hover:text-cyan-400">Projects</a>
+      <a href="#skills" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:bg-white/5 hover:text-cyan-400">Technical Skills</a>
+      <a href="#credentials" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:bg-white/5 hover:text-cyan-400">Education & Certifications</a>
+      <a href="#references" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg text-sm text-slate-300 hover:bg-white/5 hover:text-cyan-400">References</a>
     </div>
   </header>
 
-  <main id="main">
-    <section class="hero section-shell" id="home">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <div class="availability"><span class="pulse-dot"></span> OPEN TO GRADUATE STUDY & EARLY-CAREER OPPORTUNITIES</div>
-          <p class="eyebrow hero-kicker">INFORMATION TECHNOLOGY / PAKISTAN</p>
-          <h1>Building useful AI.<br><span class="gradient-text">Strengthening digital trust.</span></h1>
-          <p class="hero-intro">I'm <strong>Rao Asif Javed</strong> — an IT graduate working across <span class="typed-wrap"><span id="typedRole">Artificial Intelligence</span><span class="typed-cursor" aria-hidden="true">|</span></span>. I turn technical ideas into practical applications, analytical tools and security-focused solutions.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#projects">Explore my work <span aria-hidden="true">↘</span></a>
-            <a class="button button-secondary" href="assets/Rao_Asif_Javed_CV_Public.pdf" target="_blank" rel="noopener">View CV <span aria-hidden="true">↗</span></a>
+  <!-- Main Content -->
+  <main class="relative z-10">
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20 lg:pt-20 lg:pb-28">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-300 text-xs font-mono">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+            <span id="hero-status">Open to Graduate Study, Research Assistant & Entry-Level Roles</span>
           </div>
-          <div class="social-row" aria-label="Professional profiles">
-            <a href="https://www.linkedin.com/in/rao-asif-javed/" target="_blank" rel="noopener" aria-label="LinkedIn profile">LinkedIn <span>↗</span></a>
-            <a href="https://github.com/raoasifjaved" target="_blank" rel="noopener" aria-label="GitHub profile">GitHub <span>↗</span></a>
-            <a href="mailto:raoasifjaved171@gmail.com" aria-label="Send email">Email <span>↗</span></a>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+            Hi, I'm <br class="hidden sm:block" />
+            <span id="hero-name" class="bg-gradient-to-r from-cyan-400 via-sky-300 to-violet-400 bg-clip-text text-transparent">
+              Rao Asif Javed
+            </span>
+          </h1>
+
+          <!-- Dynamic Typing Role Headline -->
+          <div class="text-lg sm:text-2xl font-mono text-slate-300 min-h-[2.25rem]">
+            <span class="text-cyan-400">&gt;</span> <span id="typed-role"></span><span class="typing-cursor"></span>
+          </div>
+
+          <p id="hero-summary" class="text-slate-300/90 text-base sm:text-lg leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            Information Technology graduate from The Islamia University of Bahawalpur (CGPA 3.24/4.00) with hands-on project experience in artificial intelligence, natural language processing, cybersecurity, and data analysis. Built eight Python applications, completed virtual internships in AI &amp; ML and Cyber Security, and engineered a full-stack PHP/MySQL Online Voting System.
+          </p>
+
+          <!-- Primary CTA & Social Links -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-2">
+            <a href="#projects" class="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-600 hover:from-cyan-400 hover:to-violet-500 text-white font-semibold text-sm shadow-lg shadow-cyan-500/25 transition-all flex items-center gap-2">
+              <span>Explore 9 Projects</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a id="hero-linkedin" href="https://www.linkedin.com/in/rao-asif-javed/" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-slate-800/90 hover:bg-slate-800 border border-white/15 hover:border-cyan-400/50 text-white font-medium text-sm transition-all flex items-center gap-2">
+              <i class="fa-brands fa-linkedin text-cyan-400 text-base"></i>
+              <span>LinkedIn</span>
+            </a>
+
+            <a id="hero-github" href="https://github.com/raoasifjaved" target="_blank" rel="noopener noreferrer" class="px-5 py-3 rounded-xl bg-slate-800/90 hover:bg-slate-800 border border-white/15 hover:border-violet-400/50 text-white font-medium text-sm transition-all flex items-center gap-2">
+              <i class="fa-brands fa-github text-violet-400 text-base"></i>
+              <span>GitHub</span>
+            </a>
+
+            <button onclick="copyEmail()" class="px-4 py-3 rounded-xl bg-slate-900/90 hover:bg-slate-800 border border-white/10 text-slate-300 hover:text-white text-sm transition-all flex items-center gap-2" title="Copy Email Address">
+              <i class="fa-regular fa-copy text-cyan-400"></i>
+              <span class="hidden sm:inline">Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Quick Location & Contact Pills -->
+          <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-3 text-xs sm:text-sm text-slate-400 font-mono">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-cyan-400"></i> <span id="hero-location">Lodhran, Punjab, Pakistan</span></span>
+            <span class="hidden sm:inline text-slate-600">•</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-phone text-violet-400"></i> <span id="hero-phone">+92 302 5480518</span></span>
+            <span class="hidden sm:inline text-slate-600">•</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-envelope text-emerald-400"></i> <span id="hero-email">raoasifjaved171@gmail.com</span></span>
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Profile summary and portfolio highlights">
-          <div class="visual-orbit orbit-a"></div>
-          <div class="visual-orbit orbit-b"></div>
-          <div class="visual-glow"></div>
-          <div class="profile-core">
-            <div class="core-ring"><img class="profile-photo" src="assets/profile.jpg" alt="Rao Asif Javed" width="255" height="255"></div>
-            <div class="profile-status"><span></span>AVAILABLE FOR OPPORTUNITIES</div>
-          </div>
-          <div class="floating-chip chip-ai"><span class="chip-icon">✳</span><span>AI &amp; NLP<small>LLM applications</small></span></div>
-          <div class="floating-chip chip-security"><span class="chip-icon">⌁</span><span>CYBERSECURITY<small>Threat detection</small></span></div>
-          <div class="floating-chip chip-data"><span class="chip-icon">▥</span><span>DATA ANALYTICS<small>Insight from data</small></span></div>
-          <div class="visual-caption"><span class="caption-line"></span> A portfolio of practical work <span class="caption-index">01 / 04</span></div>
-        </div>
-      </div>
-      <div class="container hero-stats" data-reveal>
-        <div class="stat-item"><strong data-count="8">8</strong><span>Python applications</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat-item"><strong>3.24<span class="stat-small"> / 4.00</span></strong><span>BSIT CGPA</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat-item"><strong>100<span class="stat-small">%</span></strong><span>AI &amp; ML assessment</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat-item"><strong>09</strong><span>Selected projects</span></div>
-      </div>
-    </section>
+        <!-- Right Hero Visual: Animated Cyber-Ring Profile Portrait Frame -->
+        <div class="lg:col-span-5 flex flex-col items-center justify-center">
+          <div class="relative w-72 h-72 sm:w-80 sm:h-80 flex items-center justify-center portrait-glow rounded-full">
+            
+            <!-- Outer Dashed Orbital Ring -->
+            <svg class="absolute inset-0 w-full h-full cyber-ring-outer pointer-events-none" viewBox="0 0 320 320">
+              <defs>
+                <linearGradient id="cyberGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#06b6d4" />
+                  <stop offset="100%" stop-color="#8b5cf6" />
+                </linearGradient>
+              </defs>
+              <circle cx="160" cy="160" r="152" fill="none" stroke="url(#cyberGrad1)" stroke-width="2" stroke-dasharray="18 10 4 10" opacity="0.85" />
+              <circle cx="160" cy="8" r="5" fill="#06b6d4" />
+              <circle cx="160" cy="312" r="5" fill="#8b5cf6" />
+            </svg>
 
-    <section class="section section-about" id="about">
-      <div class="container">
-        <div class="section-heading" data-reveal>
-          <p class="eyebrow">01 — ABOUT ME</p>
-          <h2>Technology with a <span class="gradient-text">purpose.</span></h2>
-          <p class="section-lead">A practical foundation in software, intelligent systems and digital security.</p>
-        </div>
-        <div class="about-layout">
-          <div class="about-copy" data-reveal>
-            <p class="large-copy">I am a Bachelor of Science in Information Technology graduate from <strong>The Islamia University of Bahawalpur</strong>, with hands-on experience building applications in artificial intelligence, natural language processing, cybersecurity and data analysis.</p>
-            <p>My work includes eight Python applications, virtual internships in AI &amp; Machine Learning and Cyber Security, and a PHP/MySQL Online Voting System developed as my final-year project. I enjoy understanding a problem, designing a useful workflow and turning it into something people can test and use.</p>
-            <p>My next step is to grow through graduate study, research opportunities or an entry-level role where I can contribute, learn from experienced teams and deepen my technical practice.</p>
-            <a class="text-link" href="https://www.linkedin.com/in/rao-asif-javed/" target="_blank" rel="noopener">Connect on LinkedIn <span>↗</span></a>
-          </div>
-          <div class="about-aside" data-reveal>
-            <div class="detail-card">
-              <span class="detail-label">EDUCATION</span>
-              <strong>BS Information Technology</strong>
-              <p>The Islamia University of Bahawalpur</p>
-              <div class="detail-foot"><span>2022 — 2026</span><span>CGPA 3.24 / 4.00</span></div>
+            <!-- Inner Counter-Rotating Scanner Ring -->
+            <svg class="absolute inset-4 w-[calc(100%-2rem)] h-[calc(100%-2rem)] cyber-ring-inner pointer-events-none" viewBox="0 0 280 280">
+              <circle cx="140" cy="140" r="132" fill="none" stroke="#06b6d4" stroke-width="1.5" stroke-dasharray="45 25" opacity="0.45" />
+            </svg>
+
+            <!-- Core Portrait Container (100% Unaltered Face Integrity) -->
+            <div class="relative w-56 h-56 sm:w-64 sm:h-64 rounded-full overflow-hidden border-2 border-cyan-400/60 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 flex items-center justify-center shadow-2xl group">
+              
+              <!-- Real Uploaded Photo (Shown when owner uploads photo; zero distortion/filters) -->
+              <img id="profile-photo-img" src="" alt="Rao Asif Javed" class="hidden w-full h-full profile-photo-clean" />
+
+              <!-- Default High-Tech Monogram Emblem (Shown until photo is uploaded) -->
+              <div id="profile-monogram-placeholder" class="flex flex-col items-center justify-center text-center p-6 select-none">
+                <div class="w-20 h-20 rounded-2xl bg-gradient-to-tr from-cyan-500/20 to-violet-500/20 border border-cyan-400/40 flex items-center justify-center mb-3 shadow-inner">
+                  <span class="font-mono text-3xl font-extrabold bg-gradient-to-r from-cyan-300 to-violet-300 bg-clip-text text-transparent">RAJ</span>
+                </div>
+                <span class="text-xs font-mono uppercase tracking-widest text-cyan-300">Verified Profile</span>
+                <span class="text-[11px] text-slate-400 mt-1">BSIT • IUB '26</span>
+              </div>
+
+              <!-- Subtle Admin Quick-Upload Hover Overlay (Visible ONLY when Admin is logged in) -->
+              <button id="quick-photo-btn" onclick="openAdminPanel('profile')" class="hidden absolute inset-0 bg-slate-950/75 backdrop-blur-sm flex-col items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer">
+                <i class="fa-solid fa-camera text-2xl text-cyan-400 mb-2"></i>
+                <span class="text-xs font-semibold">Update Authentic Photo</span>
+              </button>
             </div>
-            <div class="detail-card detail-card-accent">
-              <span class="detail-label">CURRENT DIRECTION</span>
-              <strong>AI × Security × Data</strong>
-              <p>Building practical tools and exploring research-led problem solving.</p>
-              <div class="detail-tags"><span>Applied AI</span><span>Cybersecurity</span><span>NLP</span></div>
+
+            <!-- Floating Credential Badges -->
+            <div class="absolute -bottom-3 -left-2 sm:-left-6 glass-card px-3.5 py-2 rounded-xl flex items-center gap-2.5 shadow-xl">
+              <div class="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400">
+                <i class="fa-solid fa-award text-sm"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-white">100% Score</div>
+                <div class="text-[10px] font-mono text-slate-400">Sathtern AI &amp; ML</div>
+              </div>
             </div>
-            <div class="location-line"><span class="location-pin">⌖</span><span>Lodhran, Punjab, Pakistan</span><span class="location-rule"></span><span class="mono">PK / 01</span></div>
+
+            <div class="absolute -top-2 -right-2 sm:-right-6 glass-card px-3.5 py-2 rounded-xl flex items-center gap-2.5 shadow-xl">
+              <div class="w-8 h-8 rounded-lg bg-cyan-500/20 border border-cyan-500/40 flex items-center justify-center text-cyan-400">
+                <i class="fa-solid fa-shield-halved text-sm"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold text-white">Cyber &amp; AI</div>
+                <div class="text-[10px] font-mono text-slate-400">8+ Python Tools</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Impact Metrics Bar -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-16 reveal">
+        <div class="glass-card rounded-2xl p-5 text-center">
+          <div class="text-2xl sm:text-3xl font-extrabold text-cyan-400 font-mono counter" data-target="9">0</div>
+          <div class="text-xs sm:text-sm text-slate-300 font-medium mt-1">AI, Cyber &amp; Web Systems</div>
+        </div>
+        <div class="glass-card rounded-2xl p-5 text-center">
+          <div class="text-2xl sm:text-3xl font-extrabold text-violet-400 font-mono">3.24<span class="text-base text-slate-400">/4.00</span></div>
+          <div class="text-xs sm:text-sm text-slate-300 font-medium mt-1">BSIT CGPA (74.86%)</div>
+        </div>
+        <div class="glass-card rounded-2xl p-5 text-center">
+          <div class="text-2xl sm:text-3xl font-extrabold text-emerald-400 font-mono">100%</div>
+          <div class="text-xs sm:text-sm text-slate-300 font-medium mt-1">AI &amp; ML Assessment Score</div>
+        </div>
+        <div class="glass-card rounded-2xl p-5 text-center">
+          <div class="text-2xl sm:text-3xl font-extrabold text-amber-400 font-mono counter" data-target="8">0</div>
+          <div class="text-xs sm:text-sm text-slate-300 font-medium mt-1">Verified Certifications</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT & RESEARCH INTERESTS SECTION -->
+    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 reveal">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">01 // Domain Focus</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Research Interests &amp; Core Competencies</h2>
+        </div>
+        <p class="text-sm text-slate-400 max-w-md">
+          Bridging intelligent language systems, defensive security telemetry, and data-driven software engineering.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Research Interests Tag Cloud -->
+        <div class="lg:col-span-5 glass-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between">
+          <div>
+            <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4">
+              <i class="fa-solid fa-microscope text-cyan-400"></i>
+              <span>Research Interests</span>
+            </h3>
+            <div id="research-interests-container" class="flex flex-wrap gap-2.5">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+
+          <div class="mt-8 pt-6 border-t border-white/10">
+            <div class="flex items-center justify-between text-xs font-mono text-slate-400 mb-2">
+              <span>Languages</span>
+              <span class="text-cyan-400">Bilingual Proficiency</span>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="bg-slate-900/80 border border-white/10 rounded-xl p-3">
+                <div class="text-sm font-semibold text-white">English</div>
+                <div class="text-xs text-slate-400">Professional Working</div>
+              </div>
+              <div class="bg-slate-900/80 border border-white/10 rounded-xl p-3">
+                <div class="text-sm font-semibold text-white">Urdu</div>
+                <div class="text-xs text-slate-400">Native Speaker</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Engineering Pillars -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="glass-card rounded-2xl p-6">
+            <div class="w-11 h-11 rounded-xl bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-4">
+              <i class="fa-solid fa-brain text-lg"></i>
+            </div>
+            <h4 class="text-base font-bold text-white mb-2">AI &amp; NLP Engineering</h4>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              End-to-end NLP workflows using NLTK VADER sentiment classification, extractive &amp; LLM-powered summarization via Groq API, and interactive Streamlit apps.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6">
+            <div class="w-11 h-11 rounded-xl bg-violet-500/15 border border-violet-500/30 flex items-center justify-center text-violet-400 mb-4">
+              <i class="fa-solid fa-user-shield text-lg"></i>
+            </div>
+            <h4 class="text-base font-bold text-white mb-2">Cybersecurity &amp; Threat Detection</h4>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Packet inspection with Scapy, Suricata EVE JSON intrusion rule authoring, static Python AST vulnerability scanning, and phishing simulation platforms.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6">
+            <div class="w-11 h-11 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
+              <i class="fa-solid fa-chart-line text-lg"></i>
+            </div>
+            <h4 class="text-base font-bold text-white mb-2">Data &amp; Forensic Analytics</h4>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Data cleaning, statistical reporting, and visual dashboards with Python, Pandas, SQL, SQLite, Excel, and automated PDF/CSV generation via ReportLab.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-6">
+            <div class="w-11 h-11 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-4">
+              <i class="fa-solid fa-code text-lg"></i>
+            </div>
+            <h4 class="text-base font-bold text-white mb-2">Full-Stack &amp; Secure SDLC</h4>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              System analysis, relational database architecture (MySQL, SQLite, SQL Server, Oracle), and full-stack web applications in PHP, JavaScript, and React.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-focus" id="focus">
-      <div class="container">
-        <div class="section-heading compact-heading" data-reveal>
-          <p class="eyebrow">AREAS OF FOCUS</p>
-          <h2>Where I do my <span class="gradient-text">best work.</span></h2>
-        </div>
-        <div class="focus-grid">
-          <article class="focus-card" data-reveal>
-            <div class="focus-number">01</div><div class="focus-icon icon-purple">✳</div>
-            <h3>AI, Machine Learning &amp; NLP</h3>
-            <p>LLM-powered applications, text preprocessing, sentiment classification and summarisation workflows.</p>
-            <div class="focus-tags"><span>Python</span><span>Groq API</span><span>NLTK</span><span>Streamlit</span></div>
-          </article>
-          <article class="focus-card" data-reveal>
-            <div class="focus-number">02</div><div class="focus-icon icon-cyan">⌁</div>
-            <h3>Cybersecurity &amp; Network Defence</h3>
-            <p>Packet analysis, intrusion detection, security-event review and secure-code analysis for controlled environments.</p>
-            <div class="focus-tags"><span>Scapy</span><span>Suricata</span><span>Python AST</span><span>Threat analysis</span></div>
-          </article>
-          <article class="focus-card" data-reveal>
-            <div class="focus-number">03</div><div class="focus-icon icon-green">▥</div>
-            <h3>Data Analytics &amp; Systems</h3>
-            <p>Data preparation, visualisation, relational databases, requirements analysis and software documentation.</p>
-            <div class="focus-tags"><span>Pandas</span><span>SQL</span><span>SQLite</span><span>Excel</span></div>
-          </article>
-        </div>
-        <div class="research-strip" data-reveal><span class="eyebrow">RESEARCH INTERESTS</span><div class="research-tags"><span>Natural Language Processing</span><span>Artificial Intelligence &amp; Machine Learning</span><span>Large Language Model Applications</span><span>Sentiment Analysis &amp; Text Summarisation</span><span>Cybersecurity &amp; Threat Detection</span><span>Network Security &amp; Intrusion Detection</span><span>Secure Software Development</span><span>Data Analytics</span><span>Cloud Security</span></div></div>
+    <!-- EXPERIENCE TIMELINE SECTION -->
+    <section id="experience" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 reveal">
+      <div class="mb-10">
+        <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">02 // Career Trajectory</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Internships &amp; Industry Simulations</h2>
+      </div>
+
+      <div id="experience-list" class="relative border-l-2 border-cyan-500/30 ml-3 sm:ml-6 space-y-8">
+        <!-- Rendered dynamically from state -->
       </div>
     </section>
 
-    <section class="section section-projects" id="projects">
-      <div class="container">
-        <div class="section-heading project-heading" data-reveal>
-          <div><p class="eyebrow">02 — SELECTED WORK</p><h2>Projects that make<br><span class="gradient-text">ideas tangible.</span></h2></div>
-          <p class="project-intro">A selection of applications and systems built with Python, AI APIs, NLP libraries, databases and security tooling. Browse the source repositories and project updates.</p>
+    <!-- SELECTED PROJECTS SECTION -->
+    <section id="projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 reveal">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between mb-10 gap-6">
+        <div>
+          <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">03 // Portfolio Systems</span>
+          <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Selected Engineering Projects</h2>
         </div>
-        <div class="project-toolbar" data-reveal>
-          <div class="filter-group" role="group" aria-label="Filter projects">
-            <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All <span>09</span></button>
-            <button class="filter-button" type="button" data-filter="ai" aria-pressed="false">AI &amp; NLP</button>
-            <button class="filter-button" type="button" data-filter="security" aria-pressed="false">Cybersecurity</button>
-            <button class="filter-button" type="button" data-filter="data" aria-pressed="false">Data</button>
-            <button class="filter-button" type="button" data-filter="systems" aria-pressed="false">Systems</button>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex flex-wrap gap-2" id="project-filters">
+          <button onclick="filterProjects('All')" data-filter="All" class="filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-cyan-500 text-slate-950 transition-all">
+            All (9)
+          </button>
+          <button onclick="filterProjects('AI & NLP')" data-filter="AI & NLP" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800/80 text-slate-300 hover:text-white border border-white/10 transition-all">
+            AI &amp; NLP
+          </button>
+          <button onclick="filterProjects('Cybersecurity')" data-filter="Cybersecurity" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800/80 text-slate-300 hover:text-white border border-white/10 transition-all">
+            Cybersecurity
+          </button>
+          <button onclick="filterProjects('Full-Stack')" data-filter="Full-Stack" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800/80 text-slate-300 hover:text-white border border-white/10 transition-all">
+            Full-Stack
+          </button>
+        </div>
+      </div>
+
+      <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered dynamically from state -->
+      </div>
+    </section>
+
+    <!-- TECHNICAL SKILLS MATRIX -->
+    <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 reveal">
+      <div class="mb-10">
+        <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">04 // Tech Stack</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Technical &amp; Analytical Arsenal</h2>
+      </div>
+
+      <div id="skills-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Rendered dynamically from state -->
+      </div>
+    </section>
+
+    <!-- EDUCATION, CERTIFICATIONS & AWARDS -->
+    <section id="credentials" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 reveal">
+      <div class="mb-10">
+        <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">05 // Verified Credentials</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Education, Certifications &amp; Honors</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Education & Awards Column -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="glass-card rounded-2xl p-6">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-5">
+              <i class="fa-solid fa-graduation-cap text-cyan-400"></i>
+              <span>Academic Background</span>
+            </h3>
+            <div id="education-list" class="space-y-5">
+              <!-- Populated dynamically -->
+            </div>
           </div>
-          <span class="project-count mono" id="projectCount" aria-live="polite">SHOWING 09 PROJECTS</span>
+
+          <div class="glass-card rounded-2xl p-6 border-amber-500/20">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2 mb-4">
+              <i class="fa-solid fa-trophy text-amber-400"></i>
+              <span>Awards &amp; Distinctions</span>
+            </h3>
+            <div id="awards-list" class="space-y-3">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
         </div>
 
-        <div class="projects-grid" id="projectsGrid">
-          <article class="project-card project-featured" data-category="ai" data-reveal>
-            <div class="project-card-top"><span class="project-type">AI ENGINEERING / 01</span><span class="project-symbol symbol-violet">✳</span></div>
-            <h3>DevMind Nexus</h3>
-            <p class="project-summary">An AI software-engineering workspace that helps structure requirements, architecture and project roadmaps, with persistent project sessions and technical memory.</p>
-            <div class="project-metric"><strong>2</strong><span>users and multiple projects tested, as reported in the CV</span></div>
-            <div class="tech-stack"><span>Python</span><span>Streamlit</span><span>Groq API</span><span>SQLite</span></div>
-            <div class="project-links"><a href="https://github.com/raoasifjaved/DevMind_Nexus_Ai-Chatbot" target="_blank" rel="noopener">Source code <span>↗</span></a><a href="https://www.linkedin.com/feed/update/urn:li:activity:7508780603962540032/" target="_blank" rel="noopener">Project update <span>↗</span></a></div>
-          </article>
+        <!-- Verified Certifications Grid -->
+        <div class="lg:col-span-7 glass-card rounded-2xl p-6 sm:p-8">
+          <div class="flex items-center justify-between mb-6">
+            <h3 class="text-lg font-bold text-white flex items-center gap-2">
+              <i class="fa-solid fa-certificate text-violet-400"></i>
+              <span>Courses, Workshops &amp; Certifications</span>
+            </h3>
+            <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded-lg border border-cyan-500/30">ID Verified</span>
+          </div>
 
-          <article class="project-card" data-category="ai" data-reveal>
-            <div class="project-card-top"><span class="project-type">AI APPLICATION / 02</span><span class="project-symbol symbol-cyan">⌕</span></div>
-            <h3>ResumeLens AI</h3>
-            <p class="project-summary">A resume analyser that extracts skills and evaluates their coverage against a selected target role, then provides actionable feedback.</p>
-            <div class="project-metric"><strong>3</strong><span>resumes tested against a target role in the CV</span></div>
-            <div class="tech-stack"><span>Python</span><span>PyPDF</span><span>Groq API</span><span>ReportLab</span></div>
-            <div class="project-links"><a href="https://github.com/raoasifjaved/ResumeLens_Ai-Resume_Analyzer" target="_blank" rel="noopener">Source code <span>↗</span></a><a href="https://www.linkedin.com/feed/update/urn:li:activity:7508808514677473281/" target="_blank" rel="noopener">Project update <span>↗</span></a></div>
-          </article>
-
-          <article class="project-card" data-category="ai" data-reveal>
-            <div class="project-card-top"><span class="project-type">NLP / 03</span><span class="project-symbol symbol-blue">≋</span></div>
-            <h3>Briefly AI</h3>
-            <p class="project-summary">A text summarisation tool combining extractive and AI-assisted summaries with compression statistics for document review.</p>
-            <div class="project-metric"><strong>60%</strong><span>text reduction across 5 documents in project testing</span></div>
-            <div class="tech-stack"><span>Python</span><span>Streamlit</span><span>Groq API</span><span>NLP</span></div>
-            <div class="project-links"><a href="https://github.com/raoasifjaved/Briefly-AI_Text_Summarizer" target="_blank" rel="noopener">Source code <span>↗</span></a><a href="https://www.linkedin.com/feed/update/urn:li:activity:7509090715201818624/" target="_blank" rel="noopener">Project update <span>↗</span></a></div>
-          </article>
-
-          <article class="project-card" data-category="data" data-reveal>
-            <div class="project-card-top"><span class="project-type">DATA &amp; NLP / 04</span><span class="project-symbol symbol-green">◉</span></div>
-            <h3>Sentio</h3>
-            <p class="project-summary">A sentiment-analysis studio for reviews and CSV comments, classifying feedback and presenting insights through interactive charts.</p>
-            <div class="project-metric"><strong>1,200</strong><span>comments classified, with 6 interactive charts</span></div>
-            <div class="tech-stack"><span>NLTK VADER</span><span>Pandas</span><span>Streamlit</span><span>SQLite</span></div>
-            <div class="project-links"><a href="https://github.com/raoasifjaved/Sentio-Sentiment-Analysis-Tool" target="_blank" rel="noopener">Source code <span>↗</span></a><a href="https://www.linkedin.com/feed/update/urn:li:activity:7509529069835747328/" target="_blank" rel="noopener">Project update <span>↗</span></a></div>
-          </article>
-
-          <article class="project-card" data-category="security" data-reveal>
-            <div class="project-card-top"><span class="project-type">NETWORK SECURITY / 05</span><span class="project-symbol symbol-cyan">⌁</span></div>
-            <h3>NetScope</h3>
-            <p class="project-summary">A network packet analyser that reports IP addresses, TCP/UDP/ICMP layers and protocol statistics from captured traffic.</p>
-            <div class="project-metric"><strong>500</strong><span>packets captured and analysed in testing</span></div>
-            <div class="tech-stack"><span>Python</span><span>Scapy</span><span>Pandas</span><span>Networking</span></div>
-            <div class="project-links"><a href="https://github.com/raoasifjaved/NetScope_Basic-Network-Sniffer_Project" target="_blank" rel="noopener">Source code <span>↗</span></a><a href="https://www.linkedin.com/feed/update/urn:li:activity:7509105877212332033/" target="_blank" rel="noopener">Project update <span>↗</span></a></div>
-          </article>
-
-          <article class="project-card" data-category="security" data-reveal>
-            <div class="project-card-top"><span class="project-type">SECURITY AWARENESS / 06</span><span class="project-symbol symbol-orange">◎</span></div>
-            <h3>PhishAware Academy</h3>
-            <p class="project-summary">An interactive phishing-awareness training platform with guided learning modules and safe simulated scenarios for trainees.</p>
-            <div class="project-metric"><strong>25</strong><span>trainees reached in the CV; 12 scenarios</span></div>
-            <div class="tech-stack"><span>Python</span><span>Streamlit</span><span>Awareness</span><span>Training</span></div>
-            <div class="project-links"><a href="https://github.com/raoasifjaved/PhishAware-Academy-Module_project" target="_blank" rel="noopener">Source code <span>↗</span></a><a href="https://www.linkedin.com/feed/update/urn:li:activity:7510911679980015616/" target="_blank" rel="noopener">Project update <span>↗</span></a></div>
-          </article>
-
-          <article class="project-card" data-category="security" data-reveal>
-            <div class="project-card-top"><span class="project-type">SECURE DEVELOPMENT / 07</span><span class="project-symbol symbol-red">⌘</span></div>
-            <h3>CodeShield</h3>
-            <p class="project-summary">A secure-coding review tool that scans Python source for risky patterns, assigns severity levels and suggests remediation steps.</p>
-            <div class="project-metric"><strong>15</strong><span>insecure patterns flagged across 8 test files</span></div>
-            <div class="tech-stack"><span>Python</span><span>AST</span><span>Regex</span><span>Static analysis</span></div>
-            <div class="project-links"><a href="https://github.com/raoasifjaved/CodeSheild_SecureCodingReview_model" target="_blank" rel="noopener">Source code <span>↗</span></a><a href="https://www.linkedin.com/feed/update/urn:li:activity:7511455570441355265/" target="_blank" rel="noopener">Project update <span>↗</span></a></div>
-          </article>
-
-          <article class="project-card" data-category="security" data-reveal>
-            <div class="project-card-top"><span class="project-type">INTRUSION DETECTION / 08</span><span class="project-symbol symbol-green">◈</span></div>
-            <h3>Sentinel IDS</h3>
-            <p class="project-summary">An intrusion-detection dashboard that analyses Suricata EVE JSON alerts using custom detection rules and visual reporting.</p>
-            <div class="project-metric"><strong>340</strong><span>alerts processed; 12 custom rules written</span></div>
-            <div class="tech-stack"><span>Python</span><span>Suricata</span><span>EVE JSON</span><span>Streamlit</span></div>
-            <div class="project-links"><a href="https://github.com/raoasifjaved/SentinelIDS_Project" target="_blank" rel="noopener">Source code <span>↗</span></a><a href="https://www.linkedin.com/feed/update/urn:li:activity:7511415963465146368/" target="_blank" rel="noopener">Project update <span>↗</span></a></div>
-          </article>
-
-          <article class="project-card project-system" data-category="systems" data-reveal>
-            <div class="project-card-top"><span class="project-type">FINAL-YEAR PROJECT / 09</span><span class="project-symbol symbol-gold">▤</span></div>
-            <h3>Online Voting System</h3>
-            <p class="project-summary">A PHP/MySQL web application with voter authentication, one-vote-per-voter casting and administrator management of candidates, elections and results.</p>
-            <div class="project-metric"><strong>10,000</strong><span>registered-voter capacity described in the CV</span></div>
-            <div class="tech-stack"><span>PHP</span><span>MySQL</span><span>Web development</span><span>System design</span></div>
-            <div class="project-links"><a href="https://github.com/raoasifjaved/Online_Voting_System_Final-Report-SDD-SRS-" target="_blank" rel="noopener">Project report &amp; docs <span>↗</span></a></div>
-          </article>
-        </div>
-        <p class="project-footnote">Project figures are taken from the CV and reflect the testing or capacity described there; they are not independent performance certifications. Network-security tools are intended for authorised systems and lab environments.</p>
-      </div>
-    </section>
-
-    <section class="section section-experience" id="experience">
-      <div class="container">
-        <div class="section-heading" data-reveal><p class="eyebrow">03 — EXPERIENCE</p><h2>Learning through <span class="gradient-text">real practice.</span></h2><p class="section-lead">Virtual internships and job simulations that turned technical concepts into hands-on tasks.</p></div>
-        <div class="timeline">
-          <article class="timeline-item" data-reveal>
-            <div class="timeline-marker"><span></span></div>
-            <div class="timeline-date">OCT — NOV 2026 <span>REMOTE</span></div>
-            <div class="timeline-content"><div class="timeline-title-row"><div><h3>Cyber Security Virtual Intern</h3><p class="timeline-org">CodeAlpha</p></div><span class="timeline-badge">INTERNSHIP</span></div><p>Completed a one-month virtual internship and developed four Python security tools: a network packet sniffer, phishing-awareness platform, secure-code review tool and intrusion-detection dashboard. Received a Certificate of Completion and Letter of Recommendation.</p><div class="timeline-links"><a href="https://www.codealpha.tech/#/verification?id=CA%2FDF1%2F303929" target="_blank" rel="noopener">Verify certificate ↗</a><a href="https://www.codealphaw.online/" target="_blank" rel="noopener">Verification portal ↗</a></div></div>
-          </article>
-          <article class="timeline-item" data-reveal>
-            <div class="timeline-marker"><span></span></div>
-            <div class="timeline-date">SEP — OCT 2026 <span>REMOTE / INDIA</span></div>
-            <div class="timeline-content"><div class="timeline-title-row"><div><h3>AI &amp; ML Virtual Intern</h3><p class="timeline-org">Sathtern</p></div><span class="timeline-badge">INTERNSHIP</span></div><p>Completed the Artificial Intelligence &amp; Machine Learning virtual internship, built four AI/NLP applications using Python, Streamlit, Groq API, NLTK and SQLite, and achieved 100% on the programme's AI &amp; ML skills assessment.</p><div class="timeline-links"><a href="https://sathtern.in/verify?id=SATH-2026-99375" target="_blank" rel="noopener">Verify certificate ↗</a></div></div>
-          </article>
-          <article class="timeline-item" data-reveal>
-            <div class="timeline-marker"><span></span></div>
-            <div class="timeline-date">JUN 2026 <span>VIRTUAL</span></div>
-            <div class="timeline-content"><div class="timeline-title-row"><div><h3>Virtual Job Simulations</h3><p class="timeline-org">Deloitte Australia via Forage</p></div><span class="timeline-badge">JOB SIMULATION</span></div><p>Completed Data Analytics, Cybersecurity and Technology simulations covering forensic data analysis, threat detection, cyber-risk assessment and software-development tasks.</p><div class="timeline-links"><a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_6a441aa96eb9db081a23be27_1782850700993_completion_certificate.pdf" target="_blank" rel="noopener">View completion certificate ↗</a></div></div>
-          </article>
+          <div id="certifications-list" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Populated dynamically -->
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-education" id="education">
-      <div class="container education-grid">
-        <div class="section-heading" data-reveal><p class="eyebrow">04 — EDUCATION</p><h2>Built on a strong <span class="gradient-text">foundation.</span></h2><p class="section-lead">Formal study in information technology, supported by applied project work.</p></div>
-        <div class="education-list" data-reveal>
-          <article class="education-card">
-            <div class="education-period">2022 — 2026</div><div class="education-main"><h3>Bachelor of Science in Information Technology</h3><p>The Islamia University of Bahawalpur</p><div class="education-meta"><span>CGPA <strong>3.24 / 4.00</strong></span><span>Aggregate <strong>74.86%</strong></span><span><strong>135</strong> credit hours</span></div><div class="course-list"><span>Object-Oriented Programming — A</span><span>Internet of Things — A</span><span>System &amp; Network Administration — B+</span><span>Information Security — B+</span><span>Database Administration — B+</span></div></div>
-          </article>
-          <article class="education-card education-secondary"><div class="education-period">2020 — 2022</div><div class="education-main"><h3>Higher Secondary School Certificate</h3><p>PINS Public Higher Secondary School, Lodhran</p><span class="education-note">Pre-Medical</span></div></article>
-        </div>
+    <!-- ACADEMIC REFERENCES SECTION -->
+    <section id="references" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 reveal">
+      <div class="mb-10">
+        <span class="text-xs font-mono uppercase tracking-widest text-cyan-400">06 // Endorsements</span>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mt-1">Academic &amp; Faculty References</h2>
+      </div>
+
+      <div id="references-grid" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Populated dynamically -->
       </div>
     </section>
 
-    <section class="section section-skills" id="skills">
-      <div class="container">
-        <div class="section-heading" data-reveal><p class="eyebrow">05 — TECHNICAL TOOLKIT</p><h2>A versatile <span class="gradient-text">technical stack.</span></h2><p class="section-lead">Tools and technologies listed in my CV, organised by the work they support.</p></div>
-        <div class="skills-grid">
-          <article class="skill-card" data-reveal><div class="skill-card-head"><span class="skill-number">01</span><h3>Programming &amp; Web</h3></div><div class="skill-pills"><span>Python</span><span>PHP</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>Bootstrap</span><span>React</span><span>Java</span><span>C++</span><span>WordPress</span><span>Elementor Pro</span></div></article>
-          <article class="skill-card" data-reveal><div class="skill-card-head"><span class="skill-number">02</span><h3>AI &amp; Data</h3></div><div class="skill-pills"><span>Streamlit</span><span>Pandas</span><span>NLTK / VADER</span><span>Groq API</span><span>SQLite</span><span>SQL</span><span>Microsoft Excel</span><span>Google Analytics</span></div></article>
-          <article class="skill-card" data-reveal><div class="skill-card-head"><span class="skill-number">03</span><h3>Cybersecurity &amp; Systems</h3></div><div class="skill-pills"><span>Scapy</span><span>Suricata EVE JSON</span><span>Python AST</span><span>Regex</span><span>Threat intelligence</span><span>Network security</span><span>Web application security</span><span>Windows</span><span>Linux</span><span>Network configuration</span></div></article>
-          <article class="skill-card" data-reveal><div class="skill-card-head"><span class="skill-number">04</span><h3>Databases &amp; Cloud</h3></div><div class="skill-pills"><span>MySQL</span><span>SQL Server</span><span>Oracle</span><span>Oracle Cloud</span><span>Google Cloud</span><span>Huawei Cloud</span><span>Cloud security fundamentals</span><span>ModelArts</span><span>PyTorch</span></div></article>
-          <article class="skill-card" data-reveal><div class="skill-card-head"><span class="skill-number">05</span><h3>Digital &amp; Professional</h3></div><div class="skill-pills"><span>SEO</span><span>Social media</span><span>Content marketing</span><span>Email marketing</span><span>CRM</span><span>Graphic design</span><span>System analysis &amp; design</span><span>Requirements gathering</span><span>Database design</span><span>Prototyping &amp; testing</span><span>ReportLab</span><span>Documentation</span><span>Teamwork</span><span>Planning</span><span>Decision-making</span></div></article>
-        </div>
-        <div class="language-strip" data-reveal><div><span class="eyebrow">LANGUAGES</span><strong>Urdu <small>Native</small></strong></div><div><strong>English <small>Professional working proficiency</small></strong></div></div>
-      </div>
-    </section>
-
-    <section class="section section-credentials" id="credentials">
-      <div class="container">
-        <div class="section-heading credential-heading" data-reveal><div><p class="eyebrow">06 — CERTIFICATIONS &amp; MILESTONES</p><h2>Proof of <span class="gradient-text">continuous learning.</span></h2></div><p class="section-lead">Selected courses, workshops, virtual programmes and job simulations from the CV.</p></div>
-        <div class="credential-grid">
-          <article class="credential-card" data-reveal><div class="credential-top"><span class="credential-type">GENERATIVE AI</span><span class="credential-mark mark-google">G</span></div><h3>Introduction to Generative AI</h3><p>Google · June 2026</p><div class="credential-bottom"><span>ID: 25253921</span><a href="https://www.skills.google/public_profiles/33aa2c85-ff93-4f40-b245-a125ccd5e122/badges/25253921?utm_medium=social&amp;utm_source=linkedin&amp;utm_campaign=ql-social-share" target="_blank" rel="noopener">Verify ↗</a></div></article>
-          <article class="credential-card" data-reveal><div class="credential-top"><span class="credential-type">CYBERSECURITY</span><span class="credential-mark mark-codealpha">CA</span></div><h3>Cyber Security Virtual Internship</h3><p>CodeAlpha · Oct–Nov 2026</p><div class="credential-bottom"><span>ID: CA/DF1/303929</span><a href="https://www.codealpha.tech/#/verification?id=CA%2FDF1%2F303929" target="_blank" rel="noopener">Verify ↗</a></div></article>
-          <article class="credential-card" data-reveal><div class="credential-top"><span class="credential-type">ARTIFICIAL INTELLIGENCE</span><span class="credential-mark mark-sathtern">S</span></div><h3>AI &amp; ML Virtual Internship</h3><p>Sathtern · Sep–Oct 2026</p><div class="credential-bottom"><span>ID: SATH-2026-99375</span><a href="https://sathtern.in/verify?id=SATH-2026-99375" target="_blank" rel="noopener">Verify ↗</a></div></article>
-          <article class="credential-card" data-reveal><div class="credential-top"><span class="credential-type">CYBERSECURITY</span><span class="credential-mark mark-adbi">ADBI</span></div><h3>Cybersecurity Course</h3><p>Asian Development Bank Institute · Jul 2026</p><div class="credential-bottom"><span>Certificate verifier</span><a href="https://elearning-adbi.org/certificate-verifier/184016-178-284-1950" target="_blank" rel="noopener">Verify ↗</a></div></article>
-          <article class="credential-card" data-reveal><div class="credential-top"><span class="credential-type">JOB SIMULATIONS</span><span class="credential-mark mark-forage">F</span></div><h3>Deloitte Australia Simulations</h3><p>Forage · Data Analytics, Cybersecurity &amp; Technology · Jun 2026</p><div class="credential-bottom"><span>Completion certificate</span><a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/udmxiyHeqYQLkTPvf_9PBTqmSxAf6zZTseP_6a441aa96eb9db081a23be27_1782850700993_completion_certificate.pdf" target="_blank" rel="noopener">View ↗</a></div></article>
-          <article class="credential-card" data-reveal><div class="credential-top"><span class="credential-type">DIGITAL SKILLS</span><span class="credential-mark mark-digi">D</span></div><h3>Digital Marketing</h3><p>DigiSkills Training Program · Aug–Oct 2026</p><div class="credential-bottom"><span>ID: KM3D9Y3MK</span><a href="https://www.digiskills.pk/verify/" target="_blank" rel="noopener">Verify ↗</a></div></article>
-          <article class="credential-card" data-reveal><div class="credential-top"><span class="credential-type">E-COMMERCE</span><span class="credential-mark mark-digi">D</span></div><h3>Shopify Development &amp; Dropshipping</h3><p>DigiSkills Training Program · Aug–Oct 2026</p><div class="credential-bottom"><span>ID: DJYQEJNMK</span><a href="https://www.digiskills.pk/verify/" target="_blank" rel="noopener">Verify ↗</a></div></article>
-          <article class="credential-card" data-reveal><div class="credential-top"><span class="credential-type">PROFESSIONAL SKILLS</span><span class="credential-mark mark-oec">OEC</span></div><h3>Soft Skills Training</h3><p>ICMPD / OEC · Jun 2026</p><div class="credential-bottom"><span>Certificate record</span><a href="https://softskills.oec.gov.pk/certificate/c1654d98" target="_blank" rel="noopener">View ↗</a></div></article>
-          <article class="credential-card" data-reveal><div class="credential-top"><span class="credential-type">WORKSHOP</span><span class="credential-mark mark-ias">AI</span></div><h3>How to Build Your Own AI Agent</h3><p>IAS Online Workshop · Aug 2026</p><div class="credential-bottom"><span>Workshop participation</span><span class="no-link">Listed in CV</span></div></article>
-        </div>
-        <div class="achievement-row" data-reveal><div class="achievement-icon">✦</div><div><span class="eyebrow">HIGHLIGHT</span><h3>100% on the Sathtern AI &amp; ML skills assessment</h3><p>Assessment ID: SAT-SC-2026-0977 · September 2026</p></div><div class="achievement-side">LETTER OF RECOMMENDATION <strong>CodeAlpha · Nov 2026</strong></div></div>
-      </div>
-    </section>
-
-    <section class="section section-contact" id="contact">
-      <div class="container contact-grid">
-        <div class="contact-copy" data-reveal><p class="eyebrow">07 — CONTACT</p><h2>Let's build something <span class="gradient-text">meaningful.</span></h2><p class="section-lead">I welcome conversations about graduate study, research assistance, early-career roles and collaborative technical projects.</p><div class="contact-details"><a href="mailto:raoasifjaved171@gmail.com"><span class="contact-icon">✉</span><span><small>EMAIL</small>raoasifjaved171@gmail.com</span><span class="contact-arrow">↗</span></a><a href="tel:+923025480518"><span class="contact-icon">⌕</span><span><small>PHONE</small>+92 302 5480518</span><span class="contact-arrow">↗</span></a><div class="contact-location"><span class="contact-icon">⌖</span><span><small>LOCATION</small>Lodhran, Punjab, Pakistan</span></div></div><div class="contact-social"><a href="https://www.linkedin.com/in/rao-asif-javed/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="https://github.com/raoasifjaved" target="_blank" rel="noopener">GitHub ↗</a></div><p class="references-note">Professional references available upon request.</p></div>
-        <form class="contact-form" id="contactForm" data-reveal>
-          <div class="form-top"><span class="eyebrow">SEND A MESSAGE</span><span class="form-index">AJ / CONTACT</span></div>
-          <label for="contactName">Your name</label><input id="contactName" name="name" type="text" autocomplete="name" placeholder="How should I address you?" required>
-          <label for="contactEmail">Your email</label><input id="contactEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
-          <label for="contactMessage">Message</label><textarea id="contactMessage" name="message" rows="4" placeholder="Tell me a little about what you have in mind..." required></textarea>
-          <button class="button button-primary form-submit" type="submit">Create email <span aria-hidden="true">↗</span></button>
-          <p class="form-note" id="formNote">This form opens your email application with a drafted message. It does not send or store information on this website.</p>
-        </form>
-      </div>
-    </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-top"><a class="brand footer-brand" href="#home"><span class="brand-mark"><img src="assets/profile.jpg" alt="" width="36" height="36"></span><span class="brand-name">RAO ASIF JAVED<small>BUILDING WITH PURPOSE</small></span></a><p>AI &amp; NLP <span>·</span> Cybersecurity <span>·</span> Data Analytics</p><a class="back-top" href="#top">Back to top ↑</a></div>
-    <div class="container footer-bottom"><span>© <span id="currentYear">2026</span> Rao Asif Javed. All rights reserved.</span><span>Designed to be clear, useful and accessible.</span><span class="mono">LHR / PK</span></div>
+  <!-- FOOTER -->
+  <footer class="relative z-10 border-t border-white/10 bg-slate-950/90 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="text-center sm:text-left">
+        <div class="font-bold text-white text-base">Rao Asif Javed</div>
+        <div class="text-xs text-slate-400 mt-1">BS Information Technology • AI &amp; NLP • Cybersecurity • Data Analytics</div>
+      </div>
+
+      <div class="flex items-center gap-4 text-sm">
+        <a id="footer-linkedin" href="https://www.linkedin.com/in/rao-asif-javed/" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-cyan-400 transition-colors">
+          <i class="fa-brands fa-linkedin text-lg"></i>
+        </a>
+        <a id="footer-github" href="https://github.com/raoasifjaved" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-violet-400 transition-colors">
+          <i class="fa-brands fa-github text-lg"></i>
+        </a>
+        <a href="mailto:raoasifjaved171@gmail.com" class="text-slate-400 hover:text-emerald-400 transition-colors">
+          <i class="fa-solid fa-envelope text-lg"></i>
+        </a>
+        <span class="text-slate-700">|</span>
+        <button onclick="handleAdminTrigger()" class="text-xs font-mono text-slate-500 hover:text-cyan-400 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-shield-halved"></i>
+          <span id="footer-admin-label">Owner Login</span>
+        </button>
+      </div>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- ===================================================================== -->
+  <!-- RECRUITER PRINTABLE / DOWNLOADABLE CV MODAL                           -->
+  <!-- ===================================================================== -->
+  <div id="resume-modal" class="fixed inset-0 z-50 hidden bg-slate-950/85 backdrop-blur-md overflow-y-auto p-4 sm:p-6">
+    <div class="max-w-4xl mx-auto bg-white text-slate-900 rounded-2xl shadow-2xl overflow-hidden my-4">
+      <!-- Top Action Header (Hidden when printing) -->
+      <div class="no-print bg-slate-900 text-white px-6 py-4 flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-file-pdf text-cyan-400"></i>
+          <span class="font-semibold text-sm">Recruiter Executive CV Preview</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button onclick="window.print()" class="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs sm:text-sm flex items-center gap-2 transition-all">
+            <i class="fa-solid fa-print"></i>
+            <span>Print / Save as PDF</span>
+          </button>
+          <button onclick="closeResumeModal()" class="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Printable CV Document Body -->
+      <div id="cv-printable-area" class="p-6 sm:p-10 space-y-6 text-sm leading-relaxed">
+        <!-- Populated dynamically from current portfolio state -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- SECURE ADMIN LOGIN MODAL                                              -->
+  <!-- ===================================================================== -->
+  <div id="admin-login-modal" class="fixed inset-0 z-50 hidden bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="glass-card w-full max-w-md rounded-2xl p-6 sm:p-8 border border-cyan-500/30 shadow-2xl relative">
+      <button onclick="closeAdminLoginModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="w-12 h-12 rounded-2xl bg-cyan-500/15 border border-cyan-500/40 flex items-center justify-center text-cyan-400 mb-4">
+        <i class="fa-solid fa-fingerprint text-2xl"></i>
+      </div>
+
+      <h3 class="text-xl font-bold text-white">Portfolio Owner Authentication</h3>
+      <p class="text-xs text-slate-400 mt-1">
+        Recruiters can view all portfolio sections publicly. Sign in below to manage your profile photo, projects, credentials, and backups.
+      </p>
+
+      <form onsubmit="submitAdminLogin(event)" class="space-y-4 mt-6">
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1.5">Username</label>
+          <input id="login-username" type="text" required placeholder="admin" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyan-400" />
+        </div>
+        <div>
+          <label class="block text-xs font-mono text-slate-300 mb-1.5">Password</label>
+          <input id="login-password" type="password" required placeholder="••••••••" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyan-400" />
+        </div>
+
+        <div id="login-error" class="hidden text-xs text-rose-400 bg-rose-500/10 border border-rose-500/30 rounded-lg px-3 py-2">
+          Invalid credentials. Please try again.
+        </div>
+
+        <button type="submit" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-violet-600 hover:from-cyan-400 hover:to-violet-500 text-white font-semibold text-sm shadow-lg transition-all">
+          Unlock Admin CMS
+        </button>
+      </form>
+
+      <div id="admin-password-helper" class="mt-5 pt-4 border-t border-white/10 text-[11px] font-mono text-slate-400 text-center">
+        First-time setup: create a private password with at least 12 characters.
+      </div>
+      <div id="login-confirm-wrap" class="hidden">
+        <label class="block text-xs font-mono text-slate-300 mb-1.5">Confirm Password</label>
+        <input id="login-password-confirm" type="password" placeholder="Repeat password" class="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-white/15 text-white text-sm focus:outline-none focus:border-cyan-400" />
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- ADMIN CMS DASHBOARD MODAL (FULL LIFETIME CONTENT MANAGEMENT)          -->
+  <!-- ===================================================================== -->
+  <div id="admin-dashboard-modal" class="fixed inset-0 z-50 hidden bg-slate-950/90 backdrop-blur-lg overflow-y-auto p-3 sm:p-6">
+    <div class="max-w-5xl mx-auto bg-slate-900 border border-cyan-500/30 rounded-2xl shadow-2xl overflow-hidden my-4">
+      
+      <!-- CMS Top Bar -->
+      <div class="bg-slate-950 px-6 py-4 border-b border-white/10 flex flex-wrap items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center text-emerald-400">
+            <i class="fa-solid fa-sliders"></i>
+          </div>
+          <div>
+            <h3 class="text-base font-bold text-white">Executive Portfolio CMS</h3>
+            <span class="text-[11px] font-mono text-emerald-400">Authenticated Session • Changes Auto-Saved</span>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button onclick="logoutAdmin()" class="px-3.5 py-2 rounded-xl bg-rose-500/15 hover:bg-rose-500/25 border border-rose-500/40 text-rose-300 text-xs font-semibold flex items-center gap-1.5">
+            <i class="fa-solid fa-right-from-bracket"></i>
+            <span>Lock &amp; Exit</span>
+          </button>
+          <button onclick="closeAdminPanel()" class="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- CMS Navigation Tabs -->
+      <div class="flex overflow-x-auto border-b border-white/10 bg-slate-900/60 px-4 gap-2">
+        <button onclick="switchAdminTab('profile')" data-tab="profile" class="admin-tab-btn px-4 py-3 text-xs sm:text-sm font-semibold border-b-2 border-cyan-400 text-cyan-400 whitespace-nowrap">
+          1. Profile &amp; Photo
+        </button>
+        <button onclick="switchAdminTab('projects')" data-tab="projects" class="admin-tab-btn px-4 py-3 text-xs sm:text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white whitespace-nowrap">
+          2. Manage Projects
+        </button>
+        <button onclick="switchAdminTab('experience')" data-tab="experience" class="admin-tab-btn px-4 py-3 text-xs sm:text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white whitespace-nowrap">
+          3. Experience &amp; Certs
+        </button>
+        <button onclick="switchAdminTab('security')" data-tab="security" class="admin-tab-btn px-4 py-3 text-xs sm:text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white whitespace-nowrap">
+          4. Security &amp; Backup
+        </button>
+      </div>
+
+      <!-- CMS Tab Content Container -->
+      <div class="p-6 space-y-6">
+
+        <!-- TAB 1: PROFILE & AUTHENTIC PHOTO UPLOAD -->
+        <div id="admin-tab-profile" class="admin-tab-pane space-y-6">
+          <div class="bg-slate-950/70 border border-white/10 rounded-2xl p-5 flex flex-col sm:flex-row items-center gap-6">
+            <div class="w-28 h-28 rounded-full overflow-hidden border-2 border-cyan-400 bg-slate-800 flex items-center justify-center shrink-0">
+              <img id="admin-photo-preview" src="" alt="Preview" class="hidden w-full h-full profile-photo-clean" />
+              <span id="admin-photo-initials" class="font-mono text-2xl font-bold text-cyan-400">RAJ</span>
+            </div>
+            <div class="space-y-2 text-center sm:text-left">
+              <h4 class="font-bold text-white text-sm">Authentic Profile Portrait (Zero Face Alteration)</h4>
+              <p class="text-xs text-slate-400 max-w-lg">
+                Upload your official LinkedIn or studio headshot. Your image is rendered directly in high fidelity with natural proportions—no AI filters or facial modifications are ever applied.
+              </p>
+              <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 pt-1">
+                <label class="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs cursor-pointer transition-all">
+                  <i class="fa-solid fa-upload mr-1.5"></i> Upload Photo
+                  <input type="file" accept="image/*" onchange="handlePhotoUpload(event)" class="hidden" />
+                </label>
+                <button onclick="removeProfilePhoto()" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium">
+                  Use Monogram Emblem
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1">Full Name</label>
+              <input id="edit-name" type="text" class="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-white/15 text-white text-sm" />
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1">Availability / Status Badge</label>
+              <input id="edit-status" type="text" class="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-white/15 text-white text-sm" />
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1">Location</label>
+              <input id="edit-location" type="text" class="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-white/15 text-white text-sm" />
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1">Phone Number</label>
+              <input id="edit-phone" type="text" class="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-white/15 text-white text-sm" />
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1">Email Address</label>
+              <input id="edit-email" type="email" class="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-white/15 text-white text-sm" />
+            </div>
+            <div>
+              <label class="block text-xs font-mono text-slate-400 mb-1">LinkedIn Profile URL</label>
+              <input id="edit-linkedin" type="url" class="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-white/15 text-white text-sm" />
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-xs font-mono text-slate-400 mb-1">GitHub Profile URL</label>
+              <input id="edit-github" type="url" class="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-white/15 text-white text-sm" />
+            </div>
+            <div class="sm:col-span-2">
+              <label class="block text-xs font-mono text-slate-400 mb-1">Executive Summary</label>
+              <textarea id="edit-summary" rows="3" class="w-full px-3.5 py-2 rounded-xl bg-slate-950 border border-white/15 text-white text-sm"></textarea>
+            </div>
+          </div>
+
+          <div class="flex justify-end">
+            <button onclick="saveProfileDetails()" class="px-5 py-2.5 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-sm">
+              Save Profile Changes
+            </button>
+          </div>
+        </div>
+
+        <!-- TAB 2: MANAGE PROJECTS -->
+        <div id="admin-tab-projects" class="admin-tab-pane hidden space-y-6">
+          <div class="bg-slate-950/70 border border-white/10 rounded-2xl p-5 space-y-4">
+            <h4 class="font-bold text-white text-sm">Add New Project</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <input id="new-proj-title" type="text" placeholder="Project Title (e.g., ThreatWatch AI)" class="px-3 py-2 rounded-xl bg-slate-900 border border-white/15 text-white text-xs" />
+              <select id="new-proj-category" class="px-3 py-2 rounded-xl bg-slate-900 border border-white/15 text-white text-xs">
+                <option value="AI & NLP">AI &amp; NLP</option>
+                <option value="Cybersecurity">Cybersecurity</option>
+                <option value="Full-Stack">Full-Stack</option>
+              </select>
+              <input id="new-proj-metric" type="text" placeholder="Key Metric (e.g., 98% Accuracy)" class="px-3 py-2 rounded-xl bg-slate-900 border border-white/15 text-white text-xs" />
+              <input id="new-proj-tech" type="text" placeholder="Tech Stack (comma separated)" class="sm:col-span-2 px-3 py-2 rounded-xl bg-slate-900 border border-white/15 text-white text-xs" />
+              <input id="new-proj-link" type="url" placeholder="Verify / Repo URL" class="px-3 py-2 rounded-xl bg-slate-900 border border-white/15 text-white text-xs" />
+              <textarea id="new-proj-desc" rows="2" placeholder="Concise description of problem, architecture, and impact..." class="sm:col-span-3 px-3 py-2 rounded-xl bg-slate-900 border border-white/15 text-white text-xs"></textarea>
+            </div>
+            <button onclick="addNewProject()" class="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs">
+              + Add Project to Portfolio
+            </button>
+          </div>
+
+          <div id="admin-projects-list" class="space-y-2 max-h-72 overflow-y-auto pr-1">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- TAB 3: EXPERIENCE & CERTIFICATIONS -->
+        <div id="admin-tab-experience" class="admin-tab-pane hidden space-y-6">
+          <div class="bg-slate-950/70 border border-white/10 rounded-2xl p-5 space-y-4">
+            <h4 class="font-bold text-white text-sm">Add New Certification / Credential</h4>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <input id="new-cert-title" type="text" placeholder="Course or Certification Title" class="px-3 py-2 rounded-xl bg-slate-900 border border-white/15 text-white text-xs" />
+              <input id="new-cert-issuer" type="text" placeholder="Issuing Organization (e.g., Google)" class="px-3 py-2 rounded-xl bg-slate-900 border border-white/15 text-white text-xs" />
+              <input id="new-cert-date" type="text" placeholder="Date (e.g., Nov 2026)" class="px-3 py-2 rounded-xl bg-slate-900 border border-white/15 text-white text-xs" />
+              <input id="new-cert-id" type="text" placeholder="Credential ID (optional)" class="px-3 py-2 rounded-xl bg-slate-900 border border-white/15 text-white text-xs" />
+            </div>
+            <button onclick="addNewCertification()" class="px-4 py-2 rounded-xl bg-violet-500 hover:bg-violet-400 text-white font-bold text-xs">
+              + Add Certification
+            </button>
+          </div>
+
+          <div id="admin-certs-list" class="space-y-2 max-h-72 overflow-y-auto pr-1">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- TAB 4: SECURITY & LIFETIME JSON BACKUP -->
+        <div id="admin-tab-security" class="admin-tab-pane hidden space-y-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Change Owner Password -->
+            <div class="bg-slate-950/70 border border-white/10 rounded-2xl p-5 space-y-3">
+              <h4 class="font-bold text-white text-sm flex items-center gap-2">
+                <i class="fa-solid fa-key text-cyan-400"></i>
+                <span>Update Admin Password</span>
+              </h4>
+              <p class="text-xs text-slate-400">Set a custom 12-character password. Static hosting protects this UI locally, but cannot provide server-side account security.</p>
+              <input id="new-admin-pass" type="password" placeholder="New Password (min 6 chars)" class="w-full px-3.5 py-2 rounded-xl bg-slate-900 border border-white/15 text-white text-xs" />
+              <button onclick="updateAdminPassword()" class="px-4 py-2 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold text-xs">
+                Update Password
+              </button>
+            </div>
+
+            <!-- Lifetime Portability Backup -->
+            <div class="bg-slate-950/70 border border-white/10 rounded-2xl p-5 space-y-3">
+              <h4 class="font-bold text-white text-sm flex items-center gap-2">
+                <i class="fa-solid fa-database text-emerald-400"></i>
+                <span>Lifetime Backup &amp; Restore</span>
+              </h4>
+              <p class="text-xs text-slate-400">Export your entire portfolio (including uploaded photo &amp; edits) as a portable JSON file.</p>
+              <div class="flex flex-wrap gap-2 pt-1">
+                <button onclick="exportPortfolioJSON()" class="px-3.5 py-2 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 border border-emerald-500/40 text-emerald-300 font-semibold text-xs">
+                  <i class="fa-solid fa-download mr-1"></i> Export JSON
+                </button>
+                <label class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs cursor-pointer">
+                  <i class="fa-solid fa-upload mr-1"></i> Import JSON
+                  <input type="file" accept=".json" onchange="importPortfolioJSON(event)" class="hidden" />
+                </label>
+                <button onclick="resetToDefaultCV()" class="px-3.5 py-2 rounded-xl bg-rose-500/15 hover:bg-rose-500/25 text-rose-300 font-semibold text-xs">
+                  Reset Default CV
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================================================================== -->
+  <!-- JAVASCRIPT ENGINE: STATE, CANVAS PARTICLES, TYPING, AUTH & CMS        -->
+  <!-- ===================================================================== -->
+  <script>
+    // 1. DEFAULT VERIFIED CV & LINKEDIN DATA FOR RAO ASIF JAVED
+    const DEFAULT_PORTFOLIO_DATA = {
+      profile: {
+        name: "Rao Asif Javed",
+        status: "Open to Graduate Study, Research Assistant & Entry-Level Roles",
+        location: "Lodhran, Punjab, Pakistan",
+        phone: "+92 302 5480518",
+        email: "raoasifjaved171@gmail.com",
+        linkedin: "https://www.linkedin.com/in/rao-asif-javed/",
+        github: "https://github.com/raoasifjaved",
+        photoDataUrl: "assets/profile.jpg",
+        summary: "Information Technology graduate from The Islamia University of Bahawalpur (CGPA 3.24/4.00) with hands-on project experience in artificial intelligence, natural language processing, cybersecurity, and data analysis. Built eight Python applications, completed virtual internships in AI & ML and Cyber Security, and developed a PHP/MySQL Online Voting System as a final-year project. Seeking graduate study, research assistant opportunities, and entry-level roles in AI, cybersecurity, and data analytics.",
+        roles: [
+          "AI & NLP Engineer",
+          "Cybersecurity Analyst",
+          "Data Analytics Specialist",
+          "BS Information Technology Graduate"
+        ]
+      },
+      researchInterests: [
+        "Natural Language Processing",
+        "Artificial Intelligence & Machine Learning",
+        "Large Language Model Applications",
+        "Sentiment Analysis & Text Summarization",
+        "Cybersecurity & Threat Detection",
+        "Network Security & Intrusion Detection",
+        "Secure Software Development",
+        "Data Analytics",
+        "Cloud Security"
+      ],
+      experience: [
+        {
+          role: "Cyber Security Virtual Intern",
+          company: "CodeAlpha",
+          location: "Remote",
+          period: "Oct 2026 – Nov 2026",
+          badge: "Certificate ID: CA/DF1/303929 • Letter of Recommendation",
+          highlights: [
+            "Completed a one-month virtual internship and earned both a Certificate of Completion and an official Letter of Recommendation.",
+            "Engineered four Python security tools: a network packet sniffer (NetScope), a phishing-awareness platform (PhishAware Academy), a secure-code review tool (CodeShield), and an intrusion-detection dashboard (Sentinel IDS)."
+          ]
+        },
+        {
+          role: "AI & ML Virtual Intern",
+          company: "Sathtern",
+          location: "Remote, India",
+          period: "Sep 2026 – Oct 2026",
+          badge: "Certificate ID: SATH-2026-99375 • 100% Assessment Score",
+          highlights: [
+            "Completed the Virtual Internship Program in Artificial Intelligence & Machine Learning, achieving a 100% score on the Sathtern AI & ML skills assessment (ID: SAT-SC-2026-0977).",
+            "Built four AI/NLP applications using Python, Streamlit, Groq API, NLTK, and SQLite (DevMind Nexus, ResumeLens AI, Briefly AI, and Sentio)."
+          ]
+        },
+        {
+          role: "Virtual Job Simulations Participant",
+          company: "Deloitte Australia (via Forage)",
+          location: "Remote",
+          period: "Jun 2026",
+          badge: "Data Analytics • Cybersecurity • Technology",
+          highlights: [
+            "Completed practical industry job simulations covering forensic data analysis, threat detection, cyber risk assessment, and enterprise software development workflows."
+          ]
+        }
+      ],
+      projects: [
+        {
+          title: "Online Voting System (Final-Year Project)",
+          category: "Full-Stack",
+          tech: ["PHP", "MySQL", "HTML5", "CSS3", "JavaScript"],
+          metric: "10,000 Voters Capacity",
+          description: "Web-based election platform featuring secure voter authentication, strict one-vote-per-voter enforcement, and an administrative control panel for candidates, polls, and real-time result tabulation.",
+          link: "https://github.com/raoasifjaved/Online_Voting_System_Final-Report-SDD-SRS-"
+        },
+        {
+          title: "DevMind Nexus",
+          category: "AI & NLP",
+          tech: ["Python", "Streamlit", "Groq API", "SQLite"],
+          metric: "AI SDLC Architect",
+          description: "AI software engineering assistant that transforms product ideas into structured software requirements, system architecture blueprints, and phased project roadmaps.",
+          link: "https://github.com/raoasifjaved/DevMind_Nexus_Ai-Chatbot"
+        },
+        {
+          title: "ResumeLens AI",
+          category: "AI & NLP",
+          tech: ["Python", "PyPDF", "Groq API", "ReportLab"],
+          metric: "Automated PDF Audit",
+          description: "Intelligent resume analyzer that extracts candidate competencies from PDFs, scores role coverage against target job descriptions, and generates automated ReportLab evaluation reports.",
+          link: "https://github.com/raoasifjaved/ResumeLens_Ai-Resume_Analyzer"
+        },
+        {
+          title: "Briefly AI",
+          category: "AI & NLP",
+          tech: ["Python", "Streamlit", "Groq API"],
+          metric: "60% Text Compression",
+          description: "Hybrid text summarization engine combining extractive NLP techniques with generative LLM synthesis and real-time compression ratio analytics.",
+          link: "https://github.com/raoasifjaved/Briefly-AI_Text_Summarizer"
+        },
+        {
+          title: "Sentio",
+          category: "AI & NLP",
+          tech: ["NLTK VADER", "Pandas", "Streamlit"],
+          metric: "1,200 Reviews • 6 Charts",
+          description: "Interactive sentiment-analysis studio for product reviews and bulk CSV feedback, classifying polarity across 1,200+ records with six visual analytics charts.",
+          link: "https://github.com/raoasifjaved/Sentio-Sentiment-Analysis-Tool"
+        },
+        {
+          title: "Sentinel IDS",
+          category: "Cybersecurity",
+          tech: ["Python", "Suricata EVE JSON"],
+          metric: "12 Rules • 340 Alerts",
+          description: "Intrusion-detection dashboard parsing Suricata EVE JSON telemetry using 12 custom threat detection rules to triage and visualize 340+ security alerts.",
+          link: "https://github.com/raoasifjaved/SentinelIDS_Project"
+        },
+        {
+          title: "CodeShield",
+          category: "Cybersecurity",
+          tech: ["Python AST", "Regex", "Static Analysis"],
+          metric: "15 Flaws Flagged",
+          description: "Static application security testing (SAST) scanner leveraging Python Abstract Syntax Trees (AST) to detect insecure coding patterns, assign severity ratings, and recommend fixes.",
+          link: "https://github.com/raoasifjaved/CodeSheild_SecureCodingReview_model"
+        },
+        {
+          title: "NetScope",
+          category: "Cybersecurity",
+          tech: ["Python", "Scapy", "Pandas"],
+          metric: "500 Packets Inspected",
+          description: "Network traffic sniffer and protocol analyzer dissecting IP headers, TCP/UDP/ICMP layers, and bandwidth distribution statistics.",
+          link: "https://github.com/raoasifjaved/NetScope_Basic-Network-Sniffer_Project"
+        },
+        {
+          title: "PhishAware Academy",
+          category: "Cybersecurity",
+          tech: ["Python", "Streamlit"],
+          metric: "12 Scenarios • 25 Trainees",
+          description: "Interactive cybersecurity awareness platform featuring four training modules and 12 simulated phishing exercises to strengthen human firewall readiness.",
+          link: "https://github.com/raoasifjaved/PhishAware-Academy-Module_project"
+        }
+      ],
+      skills: [
+        {
+          category: "AI, NLP & Data Analytics",
+          icon: "fa-brain",
+          color: "cyan",
+          items: ["Python", "Pandas", "NLTK / VADER", "Groq API", "Streamlit", "PyTorch", "SQLite", "SQL", "Microsoft Excel", "ReportLab", "Google Analytics"]
+        },
+        {
+          category: "Cybersecurity & Systems",
+          icon: "fa-shield-halved",
+          color: "violet",
+          items: ["Scapy", "Suricata EVE JSON", "Python AST Static Analysis", "Threat Intelligence", "Intrusion Detection", "Network & Web App Security", "Linux", "Windows Server", "Network Configuration"]
+        },
+        {
+          category: "Programming & Web Stack",
+          icon: "fa-code",
+          color: "emerald",
+          items: ["PHP", "JavaScript", "React", "HTML5", "CSS3", "Bootstrap", "Java", "C++", "WordPress", "Elementor Pro"]
+        },
+        {
+          category: "Databases & Cloud Platforms",
+          icon: "fa-cloud",
+          color: "amber",
+          items: ["MySQL", "SQL Server", "Oracle Database", "SQLite", "Google Cloud", "Oracle Cloud", "Huawei Cloud", "ModelArts", "Cloud Security Fundamentals"]
+        },
+        {
+          category: "Digital Growth & Tools",
+          icon: "fa-toolbox",
+          color: "sky",
+          items: ["VS Code", "Git & GitHub", "SEO", "CRM", "Content & Email Marketing", "Microsoft Office", "Technical Documentation"]
+        }
+      ],
+      education: [
+        {
+          degree: "Bachelor of Science in Information Technology (BSIT)",
+          institution: "The Islamia University of Bahawalpur (IUB)",
+          period: "2022 – 2026",
+          details: "CGPA: 3.24 / 4.00 • Aggregate: 74.86% • 135 Credit Hours",
+          coursework: "Object-Oriented Programming (A), Internet of Things (A), System & Network Administration (B+), Information Security (B+), Database Administration & Management (B+)"
+        },
+        {
+          degree: "Higher Secondary School Certificate (Pre-Medical)",
+          institution: "PINS Public Higher Secondary School, Lodhran",
+          period: "2020 – 2022",
+          details: "Intermediate Science Foundation",
+          coursework: ""
+        }
+      ],
+      awards: [
+        {
+          title: "100% Score — Sathtern AI & ML Skills Assessment",
+          meta: "Sep 2026 • Verification ID: SAT-SC-2026-0977"
+        },
+        {
+          title: "Letter of Recommendation — CodeAlpha Cybersecurity",
+          meta: "Nov 2026 • Awarded for excellence in Python security engineering"
+        }
+      ],
+      certifications: [
+        { title: "Introduction to Generative AI", issuer: "Google", date: "Jun 2026", id: "25253921" },
+        { title: "Cybersecurity Virtual Internship", issuer: "CodeAlpha", date: "Oct–Nov 2026", id: "CA/DF1/303929" },
+        { title: "Artificial Intelligence & Machine Learning", issuer: "Sathtern", date: "Sep–Oct 2026", id: "SATH-2026-99375" },
+        { title: "Cybersecurity Course", issuer: "Asian Development Bank Institute (ADBI)", date: "Jul 2026", id: "Verified" },
+        { title: "Digital Marketing", issuer: "DigiSkills Training Program", date: "Aug–Oct 2026", id: "KM3D9Y3MK" },
+        { title: "Shopify Development & Dropshipping", issuer: "DigiSkills Training Program", date: "Aug–Oct 2026", id: "DJYQEJNMK" },
+        { title: "How to Build Your Own AI Agent (Workshop)", issuer: "IAS Online Workshop", date: "Aug 2026", id: "Completed" },
+        { title: "Soft Skills Training", issuer: "ICMPD / OEC", date: "Jun 2026", id: "Verified" }
+      ],
+      references: [
+        {
+          name: "Dr. Rizwan Ali Shah",
+          role: "Final-Year Project Supervisor • Assistant Professor",
+          department: "Department of Information Technology, The Islamia University of Bahawalpur (Baghdad-ul-Jadeed Campus)",
+          email: "rizwan.ali@iub.edu.pk",
+          phone: "+92 314 6889975"
+        },
+        {
+          name: "Dr. Rana Nazir Ahmad",
+          role: "IT Infrastructure Instructor • Assistant Professor",
+          department: "Department of Information Technology, The Islamia University of Bahawalpur (Baghdad-ul-Jadeed Campus)",
+          email: "nazeerrana@iub.edu.pk",
+          phone: "+92 345 7937789"
+        }
+      ]
+    };
+
+    // State Management Keys
+    const STORAGE_KEY = "raj_portfolio_data_v1";
+    const AUTH_KEY = "raj_admin_auth_v2";
+    const SESSION_KEY = "raj_admin_logged_in";
+
+    let portfolioData = loadPortfolioData();
+    let currentFilter = "All";
+    let isAdminLoggedIn = sessionStorage.getItem(SESSION_KEY) === "true";
+
+    function loadPortfolioData() {
+      try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+          return JSON.parse(saved);
+        }
+      } catch (e) {
+        console.error("Failed to read localStorage:", e);
+      }
+      return JSON.parse(JSON.stringify(DEFAULT_PORTFOLIO_DATA));
+    }
+
+    function savePortfolioData() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(portfolioData));
+      } catch (e) {
+        showToast("Storage warning: Image may be too large for browser cache. Export JSON backup!", "warning");
+      }
+    }
+
+    // 2. RENDERING ALL PORTFOLIO SECTIONS
+    function renderAll() {
+      renderProfile();
+      renderResearchInterests();
+      renderExperience();
+      renderProjects();
+      renderSkills();
+      renderCredentials();
+      renderReferences();
+      updateAdminUIState();
+    }
+
+    function renderProfile() {
+      const p = portfolioData.profile;
+      document.getElementById("nav-name").textContent = p.name;
+      document.getElementById("hero-name").textContent = p.name;
+      document.getElementById("hero-status").textContent = p.status;
+      document.getElementById("hero-summary").textContent = p.summary;
+      document.getElementById("hero-location").textContent = p.location;
+      document.getElementById("hero-phone").textContent = p.phone;
+      document.getElementById("hero-email").textContent = p.email;
+      document.getElementById("hero-linkedin").href = p.linkedin;
+      document.getElementById("hero-github").href = p.github;
+      document.getElementById("footer-linkedin").href = p.linkedin;
+      document.getElementById("footer-github").href = p.github;
+
+      // Profile Photo vs Monogram
+      const photoImg = document.getElementById("profile-photo-img");
+      const monogram = document.getElementById("profile-monogram-placeholder");
+      const adminPreview = document.getElementById("admin-photo-preview");
+      const adminInitials = document.getElementById("admin-photo-initials");
+
+      if (p.photoDataUrl) {
+        photoImg.src = p.photoDataUrl;
+        photoImg.classList.remove("hidden");
+        monogram.classList.add("hidden");
+        if (adminPreview) {
+          adminPreview.src = p.photoDataUrl;
+          adminPreview.classList.remove("hidden");
+          adminInitials.classList.add("hidden");
+        }
+      } else {
+        photoImg.classList.add("hidden");
+        monogram.classList.remove("hidden");
+        if (adminPreview) {
+          adminPreview.classList.add("hidden");
+          adminInitials.classList.remove("hidden");
+        }
+      }
+    }
+
+    function renderResearchInterests() {
+      const container = document.getElementById("research-interests-container");
+      container.innerHTML = portfolioData.researchInterests
+        .map(
+          (item) => `
+          <span class="px-3 py-1.5 rounded-xl bg-slate-900/90 border border-cyan-500/25 text-xs sm:text-sm text-cyan-200 font-medium hover:border-cyan-400 transition-colors">
+            ${escapeHTML(item)}
+          </span>
+        `
+        )
+        .join("");
+    }
+
+    function renderExperience() {
+      const container = document.getElementById("experience-list");
+      container.innerHTML = portfolioData.experience
+        .map(
+          (exp) => `
+          <div class="relative pl-6 sm:pl-8">
+            <span class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cyan-400 border-4 border-obsidian shadow-[0_0_12px_#06b6d4]"></span>
+            <div class="glass-card rounded-2xl p-6">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+                <div>
+                  <h3 class="text-lg sm:text-xl font-bold text-white">${escapeHTML(exp.role)}</h3>
+                  <div class="text-sm font-semibold text-cyan-400">${escapeHTML(exp.company)} <span class="text-slate-400 font-normal">• ${escapeHTML(exp.location)}</span></div>
+                </div>
+                <span class="inline-block px-3 py-1 rounded-lg bg-slate-900 border border-white/10 text-xs font-mono text-slate-300 self-start">
+                  ${escapeHTML(exp.period)}
+                </span>
+              </div>
+              <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-violet-500/15 border border-violet-500/30 text-violet-300 text-xs font-mono mb-4">
+                <i class="fa-solid fa-certificate"></i>
+                <span>${escapeHTML(exp.badge)}</span>
+              </div>
+              <ul class="space-y-2 text-sm text-slate-300 list-disc list-inside">
+                ${exp.highlights.map((h) => `<li>${escapeHTML(h)}</li>`).join("")}
+              </ul>
+            </div>
+          </div>
+        `
+        )
+        .join("");
+    }
+
+    function filterProjects(category) {
+      currentFilter = category;
+      document.querySelectorAll(".filter-btn").forEach((btn) => {
+        if (btn.dataset.filter === category) {
+          btn.className = "filter-btn active px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-cyan-500 text-slate-950 transition-all";
+        } else {
+          btn.className = "filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-800/80 text-slate-300 hover:text-white border border-white/10 transition-all";
+        }
+      });
+      renderProjects();
+    }
+
+    function renderProjects() {
+      const grid = document.getElementById("projects-grid");
+      const filtered =
+        currentFilter === "All"
+          ? portfolioData.projects
+          : portfolioData.projects.filter((p) => p.category === currentFilter);
+
+      // Update "All" count dynamically
+      const allBtn = document.querySelector('[data-filter="All"]');
+      if (allBtn) allBtn.textContent = `All (${portfolioData.projects.length})`;
+
+      grid.innerHTML = filtered
+        .map((proj) => {
+          const badgeColor =
+            proj.category === "AI & NLP"
+              ? "text-cyan-300 bg-cyan-500/15 border-cyan-500/30"
+              : proj.category === "Cybersecurity"
+              ? "text-violet-300 bg-violet-500/15 border-violet-500/30"
+              : "text-emerald-300 bg-emerald-500/15 border-emerald-500/30";
+
+          return `
+            <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-2 mb-4">
+                  <span class="px-2.5 py-1 rounded-lg border text-[11px] font-mono font-semibold ${badgeColor}">
+                    ${escapeHTML(proj.category)}
+                  </span>
+                  <span class="text-[11px] font-mono text-amber-300 bg-amber-500/10 border border-amber-500/25 px-2.5 py-1 rounded-lg">
+                    ${escapeHTML(proj.metric)}
+                  </span>
+                </div>
+                <h3 class="text-lg font-bold text-white mb-2">${escapeHTML(proj.title)}</h3>
+                <p class="text-sm text-slate-400 leading-relaxed mb-5">${escapeHTML(proj.description)}</p>
+              </div>
+
+              <div>
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  ${proj.tech
+                    .map(
+                      (t) =>
+                        `<span class="px-2 py-0.5 rounded-md bg-slate-900 border border-white/10 text-[11px] font-mono text-slate-300">${escapeHTML(
+                          t
+                        )}</span>`
+                    )
+                    .join("")}
+                </div>
+                <a href="${escapeHTML(proj.link)}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
+                  <span>Verify / View Project</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                </a>
+              </div>
+            </div>
+          `;
+        })
+        .join("");
+    }
+
+    function renderSkills() {
+      const grid = document.getElementById("skills-grid");
+      grid.innerHTML = portfolioData.skills
+        .map(
+          (group) => `
+          <div class="glass-card rounded-2xl p-6">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+                <i class="fa-solid ${escapeHTML(group.icon)}"></i>
+              </div>
+              <h3 class="text-base font-bold text-white">${escapeHTML(group.category)}</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              ${group.items
+                .map(
+                  (skill) =>
+                    `<span class="px-3 py-1 rounded-lg bg-slate-900/90 border border-white/10 text-xs text-slate-300 hover:border-cyan-400/50 hover:text-white transition-colors">${escapeHTML(
+                      skill
+                    )}</span>`
+                )
+                .join("")}
+            </div>
+          </div>
+        `
+        )
+        .join("");
+    }
+
+    function renderCredentials() {
+      // Education
+      const eduList = document.getElementById("education-list");
+      eduList.innerHTML = portfolioData.education
+        .map(
+          (edu) => `
+          <div class="border-l-2 border-cyan-500/40 pl-4">
+            <div class="text-xs font-mono text-cyan-400">${escapeHTML(edu.period)}</div>
+            <h4 class="text-sm sm:text-base font-bold text-white mt-0.5">${escapeHTML(edu.degree)}</h4>
+            <div class="text-xs sm:text-sm text-slate-300 mt-0.5">${escapeHTML(edu.institution)}</div>
+            <div class="text-xs font-mono text-emerald-400 mt-1">${escapeHTML(edu.details)}</div>
+            ${edu.coursework ? `<p class="text-xs text-slate-400 mt-2 leading-relaxed"><strong class="text-slate-300">Coursework:</strong> ${escapeHTML(edu.coursework)}</p>` : ""}
+          </div>
+        `
+        )
+        .join("");
+
+      // Awards
+      const awardsList = document.getElementById("awards-list");
+      awardsList.innerHTML = portfolioData.awards
+        .map(
+          (aw) => `
+          <div class="bg-slate-900/80 border border-amber-500/20 rounded-xl p-3.5">
+            <div class="text-xs sm:text-sm font-bold text-amber-300">${escapeHTML(aw.title)}</div>
+            <div class="text-[11px] font-mono text-slate-400 mt-0.5">${escapeHTML(aw.meta)}</div>
+          </div>
+        `
+        )
+        .join("");
+
+      // Certifications
+      const certList = document.getElementById("certifications-list");
+      certList.innerHTML = portfolioData.certifications
+        .map(
+          (cert) => `
+          <div class="bg-slate-900/80 border border-white/10 hover:border-violet-400/40 rounded-xl p-4 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="text-xs font-mono text-violet-400 mb-1">${escapeHTML(cert.issuer)}</div>
+              <h4 class="text-sm font-bold text-white leading-snug">${escapeHTML(cert.title)}</h4>
+            </div>
+            <div class="flex items-center justify-between text-[11px] font-mono text-slate-400 mt-3 pt-2 border-t border-white/5">
+              <span>${escapeHTML(cert.date)}</span>
+              <span class="text-cyan-300">ID: ${escapeHTML(cert.id)}</span>
+            </div>
+          </div>
+        `
+        )
+        .join("");
+    }
+
+    function renderReferences() {
+      const grid = document.getElementById("references-grid");
+      grid.innerHTML = portfolioData.references
+        .map(
+          (ref) => `
+          <div class="glass-card rounded-2xl p-6 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-11 h-11 rounded-full bg-gradient-to-br from-cyan-500/20 to-violet-500/20 border border-cyan-400/30 flex items-center justify-center text-cyan-300 font-bold">
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <div>
+                  <h3 class="text-base sm:text-lg font-bold text-white">${escapeHTML(ref.name)}</h3>
+                  <div class="text-xs font-medium text-cyan-400">${escapeHTML(ref.role)}</div>
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4">${escapeHTML(ref.department)}</p>
+            </div>
+            <div class="flex flex-wrap gap-3 pt-3 border-t border-white/10 text-xs font-mono text-slate-300">
+              <a href="mailto:${escapeHTML(ref.email)}" class="hover:text-cyan-400 flex items-center gap-1.5">
+                <i class="fa-solid fa-envelope text-cyan-400"></i> ${escapeHTML(ref.email)}
+              </a>
+              <span class="text-slate-600">•</span>
+              <span class="flex items-center gap-1.5">
+                <i class="fa-solid fa-phone text-violet-400"></i> ${escapeHTML(ref.phone)}
+              </span>
+            </div>
+          </div>
+        `
+        )
+        .join("");
+    }
+
+    // 3. RECRUITER CV MODAL & PRINTABLE FORMATTER
+    function openResumeModal() {
+      const p = portfolioData.profile;
+      const container = document.getElementById("cv-printable-area");
+      container.innerHTML = `
+        <div class="border-b-2 border-slate-900 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div>
+            <h1 class="text-2xl sm:text-3xl font-extrabold uppercase tracking-tight text-slate-900">${escapeHTML(p.name)}</h1>
+            <p class="text-xs font-bold text-cyan-700 uppercase tracking-wider mt-1">BS Information Technology Graduate | AI &amp; NLP | Cybersecurity | Data Analytics</p>
+            <p class="text-xs text-slate-600 mt-1">${escapeHTML(p.location)} | ${escapeHTML(p.phone)} | ${escapeHTML(p.email)}</p>
+            <p class="text-xs text-cyan-700 mt-0.5">${escapeHTML(p.linkedin)}</p>
+          </div>
+          ${p.photoDataUrl ? `<img src="${p.photoDataUrl}" class="w-20 h-20 rounded-xl object-cover border border-slate-300" />` : ""}
+        </div>
+
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 border-b border-slate-300 pb-1 mb-2">Professional Profile</h2>
+          <p class="text-xs text-slate-700 leading-relaxed">${escapeHTML(p.summary)}</p>
+        </div>
+
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 border-b border-slate-300 pb-1 mb-2">Experience</h2>
+          <div class="space-y-3">
+            ${portfolioData.experience
+              .map(
+                (e) => `
+              <div>
+                <div class="flex justify-between text-xs font-bold text-slate-900">
+                  <span>${escapeHTML(e.role)} — ${escapeHTML(e.company)} (${escapeHTML(e.location)})</span>
+                  <span>${escapeHTML(e.period)}</span>
+                </div>
+                <ul class="list-disc list-inside text-xs text-slate-700 mt-1">
+                  ${e.highlights.map((h) => `<li>${escapeHTML(h)}</li>`).join("")}
+                </ul>
+              </div>
+            `
+              )
+              .join("")}
+          </div>
+        </div>
+
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 border-b border-slate-300 pb-1 mb-2">Selected Projects</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            ${portfolioData.projects
+              .map(
+                (pr) => `
+              <div class="border border-slate-200 rounded-lg p-2.5">
+                <div class="font-bold text-xs text-slate-900">${escapeHTML(pr.title)} <span class="font-normal text-slate-500">(${escapeHTML(pr.tech.join(", "))})</span></div>
+                <p class="text-[11px] text-slate-700 mt-0.5">${escapeHTML(pr.description)}</p>
+              </div>
+            `
+              )
+              .join("")}
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 border-b border-slate-300 pb-1 mb-2">Education</h2>
+            ${portfolioData.education
+              .map(
+                (ed) => `
+              <div class="mb-2">
+                <div class="font-bold text-xs text-slate-900">${escapeHTML(ed.degree)}</div>
+                <div class="text-[11px] text-slate-700">${escapeHTML(ed.institution)} (${escapeHTML(ed.period)})</div>
+                <div class="text-[11px] text-slate-600">${escapeHTML(ed.details)}</div>
+              </div>
+            `
+              )
+              .join("")}
+          </div>
+          <div>
+            <h2 class="text-xs font-bold uppercase tracking-widest text-slate-900 border-b border-slate-300 pb-1 mb-2">Certifications &amp; Awards</h2>
+            <ul class="list-disc list-inside text-[11px] text-slate-700 space-y-0.5">
+              ${portfolioData.certifications.map((c) => `<li><strong>${escapeHTML(c.title)}</strong> — ${escapeHTML(c.issuer)} (${escapeHTML(c.id)})</li>`).join("")}
+            </ul>
+          </div>
+        </div>
+      `;
+      document.getElementById("resume-modal").classList.remove("hidden");
+    }
+
+    function closeResumeModal() {
+      document.getElementById("resume-modal").classList.add("hidden");
+    }
+
+    // 4. SECURE ADMIN AUTHENTICATION & CMS OPERATIONS
+    function hexToBytes(hex) {
+      return new Uint8Array(hex.match(/.{1,2}/g).map((byte) => parseInt(byte, 16)));
+    }
+
+    function bytesToHex(bytes) {
+      return Array.from(bytes).map((byte) => byte.toString(16).padStart(2, "0")).join("");
+    }
+
+    async function derivePasswordHash(password, saltHex) {
+      const keyMaterial = await crypto.subtle.importKey(
+        "raw",
+        new TextEncoder().encode(password),
+        "PBKDF2",
+        false,
+        ["deriveBits"]
+      );
+      const bits = await crypto.subtle.deriveBits(
+        { name: "PBKDF2", salt: hexToBytes(saltHex), iterations: 150000, hash: "SHA-256" },
+        keyMaterial,
+        256
+      );
+      return bytesToHex(new Uint8Array(bits));
+    }
+
+    async function setupAdminPassword(password) {
+      const random = crypto.getRandomValues(new Uint8Array(16));
+      const salt = bytesToHex(random);
+      const hash = await derivePasswordHash(password, salt);
+      localStorage.setItem(AUTH_KEY, JSON.stringify({ salt, hash, iterations: 150000 }));
+    }
+
+    async function verifyAdminPassword(password) {
+      const saved = localStorage.getItem(AUTH_KEY);
+      if (!saved) return null;
+      try {
+        const auth = JSON.parse(saved);
+        const candidate = await derivePasswordHash(password, auth.salt);
+        return candidate === auth.hash;
+      } catch (error) {
+        return false;
+      }
+    }
+
+    function handleAdminTrigger() {
+      if (isAdminLoggedIn) {
+        openAdminPanel("profile");
+      } else {
+        document.getElementById("login-error").classList.add("hidden");
+        const hasPassword = Boolean(localStorage.getItem(AUTH_KEY));
+        document.getElementById("login-confirm-wrap").classList.toggle("hidden", hasPassword);
+        document.getElementById("login-password-confirm").required = !hasPassword;
+        document.getElementById("admin-password-helper").textContent = hasPassword
+          ? "Private owner session • Static CMS protection"
+          : "First-time setup: create a private password with at least 12 characters.";
+        document.getElementById("admin-login-modal").classList.remove("hidden");
+      }
+    }
+
+    function closeAdminLoginModal() {
+      document.getElementById("admin-login-modal").classList.add("hidden");
+    }
+
+    async function submitAdminLogin(event) {
+      event.preventDefault();
+      const user = document.getElementById("login-username").value.trim();
+      const pass = document.getElementById("login-password").value;
+      const confirm = document.getElementById("login-password-confirm").value;
+
+      if (user !== "admin") {
+        document.getElementById("login-error").textContent = "Invalid username.";
+        document.getElementById("login-error").classList.remove("hidden");
+        return;
+      }
+
+      const hasPassword = Boolean(localStorage.getItem(AUTH_KEY));
+      if (!hasPassword) {
+        if (pass.length < 12) {
+          document.getElementById("login-error").textContent = "Use at least 12 characters for the owner password.";
+          document.getElementById("login-error").classList.remove("hidden");
+          return;
+        }
+        if (pass !== confirm) {
+          document.getElementById("login-error").textContent = "Passwords do not match.";
+          document.getElementById("login-error").classList.remove("hidden");
+          return;
+        }
+        await setupAdminPassword(pass);
+      } else if (!(await verifyAdminPassword(pass))) {
+        document.getElementById("login-error").textContent = "Invalid owner password.";
+        document.getElementById("login-error").classList.remove("hidden");
+        return;
+      }
+
+      isAdminLoggedIn = true;
+      sessionStorage.setItem(SESSION_KEY, "true");
+      closeAdminLoginModal();
+      updateAdminUIState();
+      openAdminPanel("profile");
+      showToast(hasPassword ? "Owner CMS unlocked." : "Private owner password configured.", "success");
+    }
+
+    function logoutAdmin() {
+      isAdminLoggedIn = false;
+      sessionStorage.removeItem(SESSION_KEY);
+      closeAdminPanel();
+      updateAdminUIState();
+      showToast("Admin session locked. Recruiter view active.", "info");
+    }
+
+    function updateAdminUIState() {
+      const navIcon = document.getElementById("admin-nav-icon");
+      const footerLabel = document.getElementById("footer-admin-label");
+      const quickPhotoBtn = document.getElementById("quick-photo-btn");
+
+      if (isAdminLoggedIn) {
+        navIcon.className = "fa-solid fa-unlock text-emerald-400 text-xs sm:text-sm";
+        footerLabel.textContent = "Admin CMS Active";
+        footerLabel.classList.add("text-emerald-400");
+        quickPhotoBtn.classList.remove("hidden");
+        quickPhotoBtn.classList.add("flex");
+      } else {
+        navIcon.className = "fa-solid fa-lock text-xs sm:text-sm";
+        footerLabel.textContent = "Owner Login";
+        footerLabel.classList.remove("text-emerald-400");
+        quickPhotoBtn.classList.add("hidden");
+        quickPhotoBtn.classList.remove("flex");
+      }
+    }
+
+    function openAdminPanel(tabName = "profile") {
+      if (!isAdminLoggedIn) return;
+      populateAdminForms();
+      switchAdminTab(tabName);
+      document.getElementById("admin-dashboard-modal").classList.remove("hidden");
+    }
+
+    function closeAdminPanel() {
+      document.getElementById("admin-dashboard-modal").classList.add("hidden");
+    }
+
+    function switchAdminTab(tabName) {
+      document.querySelectorAll(".admin-tab-pane").forEach((pane) => pane.classList.add("hidden"));
+      document.getElementById(`admin-tab-${tabName}`).classList.remove("hidden");
+
+      document.querySelectorAll(".admin-tab-btn").forEach((btn) => {
+        if (btn.dataset.tab === tabName) {
+          btn.className = "admin-tab-btn px-4 py-3 text-xs sm:text-sm font-semibold border-b-2 border-cyan-400 text-cyan-400 whitespace-nowrap";
+        } else {
+          btn.className = "admin-tab-btn px-4 py-3 text-xs sm:text-sm font-semibold border-b-2 border-transparent text-slate-400 hover:text-white whitespace-nowrap";
+        }
+      });
+    }
+
+    function populateAdminForms() {
+      const p = portfolioData.profile;
+      document.getElementById("edit-name").value = p.name;
+      document.getElementById("edit-status").value = p.status;
+      document.getElementById("edit-location").value = p.location;
+      document.getElementById("edit-phone").value = p.phone;
+      document.getElementById("edit-email").value = p.email;
+      document.getElementById("edit-linkedin").value = p.linkedin;
+      document.getElementById("edit-github").value = p.github;
+      document.getElementById("edit-summary").value = p.summary;
+
+      // Render Admin Projects List
+      const adminProjList = document.getElementById("admin-projects-list");
+      adminProjList.innerHTML = portfolioData.projects
+        .map(
+          (proj, idx) => `
+          <div class="flex items-center justify-between bg-slate-950/80 border border-white/10 rounded-xl px-4 py-2.5 text-xs">
+            <div>
+              <span class="font-bold text-white">${escapeHTML(proj.title)}</span>
+              <span class="text-cyan-400 ml-2">[${escapeHTML(proj.category)}]</span>
+            </div>
+            <button onclick="deleteProject(${idx})" class="text-rose-400 hover:text-rose-300 px-2 py-1">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        `
+        )
+        .join("");
+
+      // Render Admin Certifications List
+      const adminCertsList = document.getElementById("admin-certs-list");
+      adminCertsList.innerHTML = portfolioData.certifications
+        .map(
+          (cert, idx) => `
+          <div class="flex items-center justify-between bg-slate-950/80 border border-white/10 rounded-xl px-4 py-2.5 text-xs">
+            <div>
+              <span class="font-bold text-white">${escapeHTML(cert.title)}</span>
+              <span class="text-slate-400 ml-2">(${escapeHTML(cert.issuer)})</span>
+            </div>
+            <button onclick="deleteCertification(${idx})" class="text-rose-400 hover:text-rose-300 px-2 py-1">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        `
+        )
+        .join("");
+    }
+
+    function handlePhotoUpload(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        portfolioData.profile.photoDataUrl = e.target.result;
+        savePortfolioData();
+        renderProfile();
+        showToast("Authentic portrait updated with zero distortion!", "success");
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function removeProfilePhoto() {
+      portfolioData.profile.photoDataUrl = "";
+      savePortfolioData();
+      renderProfile();
+      showToast("Switched back to RAJ cyber monogram.", "info");
+    }
+
+    function saveProfileDetails() {
+      portfolioData.profile.name = document.getElementById("edit-name").value.trim() || "Rao Asif Javed";
+      portfolioData.profile.status = document.getElementById("edit-status").value.trim();
+      portfolioData.profile.location = document.getElementById("edit-location").value.trim();
+      portfolioData.profile.phone = document.getElementById("edit-phone").value.trim();
+      portfolioData.profile.email = document.getElementById("edit-email").value.trim();
+      portfolioData.profile.linkedin = document.getElementById("edit-linkedin").value.trim();
+      portfolioData.profile.github = document.getElementById("edit-github").value.trim();
+      portfolioData.profile.summary = document.getElementById("edit-summary").value.trim();
+
+      savePortfolioData();
+      renderProfile();
+      showToast("Profile details saved!", "success");
+    }
+
+    function addNewProject() {
+      const title = document.getElementById("new-proj-title").value.trim();
+      const category = document.getElementById("new-proj-category").value;
+      const metric = document.getElementById("new-proj-metric").value.trim() || "Verified System";
+      const techRaw = document.getElementById("new-proj-tech").value.trim();
+      const link = document.getElementById("new-proj-link").value.trim() || portfolioData.profile.linkedin;
+      const description = document.getElementById("new-proj-desc").value.trim();
+
+      if (!title || !description) {
+        showToast("Please provide both a project title and description.", "warning");
+        return;
+      }
+
+      const tech = techRaw ? techRaw.split(",").map((s) => s.trim()).filter(Boolean) : ["Python"];
+      portfolioData.projects.unshift({ title, category, tech, metric, description, link });
+      savePortfolioData();
+      renderProjects();
+      populateAdminForms();
+
+      document.getElementById("new-proj-title").value = "";
+      document.getElementById("new-proj-metric").value = "";
+      document.getElementById("new-proj-tech").value = "";
+      document.getElementById("new-proj-link").value = "";
+      document.getElementById("new-proj-desc").value = "";
+      showToast("New project published to portfolio!", "success");
+    }
+
+    function deleteProject(idx) {
+      portfolioData.projects.splice(idx, 1);
+      savePortfolioData();
+      renderProjects();
+      populateAdminForms();
+      showToast("Project removed.", "info");
+    }
+
+    function addNewCertification() {
+      const title = document.getElementById("new-cert-title").value.trim();
+      const issuer = document.getElementById("new-cert-issuer").value.trim();
+      const date = document.getElementById("new-cert-date").value.trim() || "2026";
+      const id = document.getElementById("new-cert-id").value.trim() || "Verified";
+
+      if (!title || !issuer) {
+        showToast("Please enter certification title and issuer.", "warning");
+        return;
+      }
+
+      portfolioData.certifications.unshift({ title, issuer, date, id });
+      savePortfolioData();
+      renderCredentials();
+      populateAdminForms();
+
+      document.getElementById("new-cert-title").value = "";
+      document.getElementById("new-cert-issuer").value = "";
+      document.getElementById("new-cert-date").value = "";
+      document.getElementById("new-cert-id").value = "";
+      showToast("Certification added!", "success");
+    }
+
+    function deleteCertification(idx) {
+      portfolioData.certifications.splice(idx, 1);
+      savePortfolioData();
+      renderCredentials();
+      populateAdminForms();
+      showToast("Certification removed.", "info");
+    }
+
+    async function updateAdminPassword() {
+      const newPass = document.getElementById("new-admin-pass").value;
+      if (newPass.length < 12) {
+        showToast("Password must be at least 12 characters.", "warning");
+        return;
+      }
+      await setupAdminPassword(newPass);
+      document.getElementById("new-admin-pass").value = "";
+      showToast("Owner password updated with salted PBKDF2 hashing.", "success");
+    }
+
+    function exportPortfolioJSON() {
+      const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(portfolioData, null, 2));
+      const dlAnchor = document.createElement("a");
+      dlAnchor.setAttribute("href", dataStr);
+      dlAnchor.setAttribute("download", "Rao_Asif_Javed_Portfolio_Backup.json");
+      document.body.appendChild(dlAnchor);
+      dlAnchor.click();
+      dlAnchor.remove();
+      showToast("Portfolio backup JSON downloaded!", "success");
+    }
+
+    function importPortfolioJSON(event) {
+      const file = event.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        try {
+          const parsed = JSON.parse(e.target.result);
+          if (parsed && parsed.profile && parsed.projects) {
+            portfolioData = parsed;
+            savePortfolioData();
+            renderAll();
+            populateAdminForms();
+            showToast("Portfolio restored from JSON backup!", "success");
+          } else {
+            showToast("Invalid portfolio JSON format.", "warning");
+          }
+        } catch (err) {
+          showToast("Could not parse JSON file.", "warning");
+        }
+      };
+      reader.readAsText(file);
+    }
+
+    function resetToDefaultCV() {
+      portfolioData = JSON.parse(JSON.stringify(DEFAULT_PORTFOLIO_DATA));
+      savePortfolioData();
+      renderAll();
+      populateAdminForms();
+      showToast("Portfolio restored to original CV & LinkedIn data.", "info");
+    }
+
+    // 5. UTILITY HELPERS (CLIPBOARD, TOASTS, MOBILE MENU, XSS ESCAPE)
+    function escapeHTML(str) {
+      if (str === null || str === undefined) return "";
+      return String(str)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function copyEmail() {
+      const email = portfolioData.profile.email;
+      const tempInput = document.createElement("input");
+      tempInput.value = email;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      showToast(`Copied: ${email}`, "success");
+    }
+
+    function toggleMobileMenu() {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    }
+
+    function showToast(message, type = "info") {
+      const container = document.getElementById("toast-container");
+      const toast = document.createElement("div");
+      const borderCol =
+        type === "success"
+          ? "border-emerald-500/50 text-emerald-300"
+          : type === "warning"
+          ? "border-amber-500/50 text-amber-300"
+          : "border-cyan-500/50 text-cyan-300";
+
+      toast.className = `pointer-events-auto bg-slate-900/95 backdrop-blur-md border ${borderCol} px-4 py-3 rounded-xl shadow-2xl text-xs font-medium flex items-center gap-2.5 transform transition-all duration-300 translate-y-2 opacity-0`;
+      toast.innerHTML = `<i class="fa-solid fa-circle-info"></i><span>${escapeHTML(message)}</span>`;
+      container.appendChild(toast);
+
+      requestAnimationFrame(() => {
+        toast.classList.remove("translate-y-2", "opacity-0");
+      });
+
+      setTimeout(() => {
+        toast.classList.add("opacity-0", "translate-y-2");
+        setTimeout(() => toast.remove(), 300);
+      }, 3200);
+    }
+
+    // 6. TYPING EFFECT IN HERO SECTION
+    let roleIdx = 0;
+    let charIdx = 0;
+    let isDeleting = false;
+
+    function runTypingEffect() {
+      const roles = portfolioData.profile.roles;
+      const currentWord = roles[roleIdx % roles.length];
+      const targetEl = document.getElementById("typed-role");
+
+      if (!isDeleting) {
+        targetEl.textContent = currentWord.substring(0, charIdx + 1);
+        charIdx++;
+        if (charIdx === currentWord.length) {
+          isDeleting = true;
+          setTimeout(runTypingEffect, 1800);
+          return;
+        }
+      } else {
+        targetEl.textContent = currentWord.substring(0, charIdx - 1);
+        charIdx--;
+        if (charIdx === 0) {
+          isDeleting = false;
+          roleIdx++;
+        }
+      }
+      setTimeout(runTypingEffect, isDeleting ? 42 : 85);
+    }
+
+    // 7. SCROLL REVEAL & ANIMATED COUNTERS
+    function initScrollAnimations() {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              entry.target.querySelectorAll(".counter").forEach((counter) => {
+                if (!counter.dataset.animated) {
+                  counter.dataset.animated = "true";
+                  animateCounter(counter);
+                }
+              });
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+    }
+
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.target, 10);
+      let current = 0;
+      const step = Math.max(1, Math.ceil(target / 30));
+      const timer = setInterval(() => {
+        current += step;
+        if (current >= target) {
+          el.textContent = target + "+";
+          clearInterval(timer);
+        } else {
+          el.textContent = current;
+        }
+      }, 45);
+    }
+
+    // 8. INTERACTIVE NEURAL / CYBER PARTICLE NETWORK CANVAS
+    function initParticleCanvas() {
+      const canvas = document.getElementById("bg-canvas");
+      const ctx = canvas.getContext("2d");
+      let width, height, particles;
+
+      function resize() {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+        const count = Math.min(65, Math.floor((width * height) / 22000));
+        particles = Array.from({ length: count }, () => ({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.45,
+          vy: (Math.random() - 0.5) * 0.45,
+          r: Math.random() * 1.8 + 0.8,
+        }));
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, width, height);
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < 0 || p.x > width) p.vx *= -1;
+          if (p.y < 0 || p.y > height) p.vy *= -1;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = "rgba(6, 182, 212, 0.55)";
+          ctx.fill();
+
+          for (let j = i + 1; j < particles.length; j++) {
+            const p2 = particles[j];
+            const dx = p.x - p2.x;
+            const dy = p.y - p2.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 130) {
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.strokeStyle = `rgba(139, 92, 246, ${(1 - dist / 130) * 0.22})`;
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(draw);
+      }
+
+      window.addEventListener("resize", resize);
+      resize();
+      draw();
+    }
+
+    // INITIALIZE ON LOAD
+    window.addEventListener("DOMContentLoaded", () => {
+      renderAll();
+      runTypingEffect();
+      initScrollAnimations();
+      initParticleCanvas();
+    });
+  </script>
 </body>
 </html>
